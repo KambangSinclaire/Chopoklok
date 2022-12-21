@@ -8,9 +8,9 @@ import menu6 from '../../assets/images/menu-6.jpg';
 const Menu = () => {
     return (
         <section className="menu-container">
-            <header className="header-container flex flex-col justify-center w-1/2">
-                <h1 className='text-orange text-lg'>Today's Menu</h1>
-                <p className='h-5 w-1/4 bg-teal-700 relative -top-7'></p>
+            <header className="header-container">
+                <h1>Today's Menu</h1>
+                <span></span>
             </header>
             <div className="menu-items-container">
                 <div className="menu-item">

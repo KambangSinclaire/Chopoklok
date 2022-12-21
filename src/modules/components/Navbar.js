@@ -2,17 +2,29 @@ const Navbar = () => {
     return (
         <header className="bg-blue-500">
             <nav className="w-full">
-                <ul>
-                    <li>
+                <ul className="
+                w-1/2
+                flex justify-around 
+                items-center
+                ">
+                    <li className="
+                    nav-styles hover:bg-orange-500
+                    ">
                         <a>Home</a>
                     </li>
-                    <li>
+                    <li className="
+                    nav-styles hover:bg-orange-500
+                    ">
                         <a>Orders</a>
                     </li>
-                    <li>
+                    <li className="
+                    nav-styles hover:bg-orange-500
+                    ">
                         <a>About</a>
                     </li>
-                    <li>
+                    <li className="
+                    nav-styles hover:bg-orange-500
+                    ">
                         <a>Contact</a>
                     </li>
                 </ul>

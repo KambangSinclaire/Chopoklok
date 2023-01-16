@@ -1,17 +1,7 @@
-import Navbar from './modules/components/Navbar';
-import './App.css';
-import Footer from './modules/components/Footer';
-import Menu from './modules/components/Menu';
+import Layout from './Components/Layout/Layout'
 
 function App() {
-  return (
-    <section>
-      {/* Navbar section */}
-      <Navbar />
-      <Menu />
-      <Footer />
-    </section>
-  );
+  return <Layout/>
 }
 
 export default App;

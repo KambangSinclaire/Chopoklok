@@ -25,7 +25,7 @@ const categoryData = [
   },
 
   {
-    display: "Row Meat",
+    display: "Raw Meat",
     imgUrl: categoryImg04,
   },
 ];

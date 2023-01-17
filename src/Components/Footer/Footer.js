@@ -11,7 +11,7 @@ const Footer = () => {
     <div className="footer_logo text-start">
             <img src={logo} alt="logo"></img>
             <h5>ChopOklok</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas autem doloremque.</p>
+            <p>There is room for inquiries and proposals as to your personal satisfaction.</p>
           </div>
     </Col>
 
@@ -19,13 +19,13 @@ const Footer = () => {
       <h5 className='footer_title'>Delivery Time</h5>
       <ListGroup>
         <ListGroupItem className='delivery_time-item border-0 ps-0'>
-          <span>Sunday - Thursday</span>
-          <p>10:00am - 11:00pm</p>
+          <span>Monnday - Saturday</span>
+          <p>06:30am - 11:00pm</p>
         </ListGroupItem>
 
         <ListGroupItem className='delivery_time-item  border-0 ps-0'>
-          <span>Friday - Saturday</span>
-          <p>Off day</p>
+          <span>Sundays</span>
+          <p>12:00pm - 10:00pm</p>
         </ListGroupItem>
       </ListGroup>
 
@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="newsletter">
         <input type="email" placeholder='Enter your email' />
         <span>
-          <i class="ri-send-plane-line"></i>
+          <i className="ri-send-plane-line"></i>
         </span>
       </div>
     </Col>
@@ -63,29 +63,29 @@ const Footer = () => {
   </Col>
   <Col lg='6' md='6'>
     <div className='social_links d-flex align-items-center gap-4 justify-content-end'>
-      <p className='m-0'>Follow:</p>
+      <p className='m-0'>Follow us:</p>
       <span>
         {""}
       <Link to="">
-        <i class="ri-facebook-line"></i>
+        <i className="ri-facebook-line"></i>
       </Link>
       </span>
       <span>
         {""}
       <Link to="">
-        <i class="ri-github-line"></i>
+        <i className="ri-github-line"></i>
       </Link>
       </span>
       <span>
         {""}
       <Link to="">
-        <i class="ri-youtube-line"></i>
+        <i className="ri-youtube-line"></i>
       </Link>
       </span>
       <span>
         {""}
       <Link to="">
-        <i class="ri-linkedin-line"></i>
+        <i className="ri-linkedin-line"></i>
       </Link>{""}
       </span>
     </div>

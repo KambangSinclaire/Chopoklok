@@ -22,10 +22,7 @@ const TestimonialSlider = () => {
     <Slider {...settings}>
       <div>
         <p className="review__text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          atque, quam minus totam maiores laborum! Impedit consectetur illum
-          aliquid odit. Odit dolore ipsum quod debitis nostrum necessitatibus
-          quis dolorem quas!"
+          Wooooow! ChopOklok is the real deal bro. Thanks so much. Delicious is the woordd!!!
         </p>
         <div className=" slider__content d-flex align-items-center gap-3 ">
           <img src={ava01} alt="avatar" className=" rounded" />
@@ -34,10 +31,7 @@ const TestimonialSlider = () => {
       </div>
       <div>
         <p className="review__text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          atque, quam minus totam maiores laborum! Impedit consectetur illum
-          aliquid odit. Odit dolore ipsum quod debitis nostrum necessitatibus
-          quis dolorem quas!"
+          The food here is fire...
         </p>
         <div className="slider__content d-flex align-items-center gap-3 ">
           <img src={ava02} alt="avatar" className=" rounded" />
@@ -46,10 +40,7 @@ const TestimonialSlider = () => {
       </div>
       <div>
         <p className="review__text">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          atque, quam minus totam maiores laborum! Impedit consectetur illum
-          aliquid odit. Odit dolore ipsum quod debitis nostrum necessitatibus
-          quis dolorem quas!"
+          OMG! Short of words, simply the best I have had in recent times. 
         </p>
         <div className="slider__content d-flex align-items-center gap-3 ">
           <img src={ava03} alt="avatar" className=" rounded" />

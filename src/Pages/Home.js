@@ -31,18 +31,18 @@ const featureData = [
   {
     title: "Quick Delivery",
     imgUrl: featureImg01,
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, doloremque.",
+    desc: "We know the essence of timely supply of food, hence our app name 'Chopoklok' and the facilities we've put in place to ensure its success. ",
   },
 
   {
     title: "Super Dine In",
     imgUrl: featureImg02,
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, doloremque.",
+    desc: "There's also provision of a well equiped air-conditioned lounge for those who want to be served at the restaurant. Eating at our lounge requires no transport fare charges and the comfortable space is at the disposal of our dine-in clients at no additional cost",
   },
   {
     title: "Easy Pick Up",
     imgUrl: featureImg03,
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, doloremque.",
+    desc: "Picking up your commands yourself is also allowed with no additional fee. If delayed by us upon pick-up, we entertain your patience with snacks while you wait and you can't wait for long because our capable hands got you all covered",
   },
 ];
 
@@ -95,38 +95,52 @@ const Home = () => {
           <Row>
             <Col lg="6" md="6">
               <div className="hero__content  ">
-                <h5 className="mb-3">Easy way to make an order</h5>
+                
                 <h1 className="mb-4 hero__title">
-                  <span>HUNGRY?</span> Just wait <br /> food at
-                  <span> your door</span>
+                  <span>HUNGRY?</span> Our services <br /> are just at
+                  <span> your door step</span>
                 </h1>
-
+                <h4 className="mb-3"><em>Easy way to make an order</em></h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-                  magni delectus tenetur autem, sint veritatis!
+                Welcome to Chopoklok, <strong>your favourite online Restaurant Service with no boundary. </strong>
+                <em>"We are just a tablet away". </em><br/>
+                The main idea behind chopoklok is to curb client-server arguments in food service setups(Restaurants). 
+                It seems to have been a noticed problem in food service setups (restaurants) when clients tend to complain 
+                of arriving earlier than others who’ve been served before them and the time it takes for a customer to think 
+                of choices before actually placing an order. 
+                This Web App(chopoklok) is to be created and made available online such that clients, either within or without 
+                the food service premise can take their time and navigate through the list of all available items, make their choices, 
+                places their orders and choose whether it should be delivered at their destinations or indicate if they are coming 
+                to pick their commands up themselves from the food service shop. 
+                We are confident that once this idea is realised, will solve this problem and minimise the client-server conflicts by 
+                making it possible for all client placed orders to be aligned in the kitchen just in the order in which they were 
+                submitted so that those working in the kitchen can follow the orders from the oldest on the order list down to the most 
+                recent thereby reducing complaints of delay in service.
+                So feel at home and place your order wherever and whenever.<br/>
+                <em> <strong>"We are at your service regionwide". </strong></em>
                 </p>
 
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
                   <button className="order__btn d-flex align-items-center justify-content-between">
-                    Order now <i class="ri-arrow-right-s-line"></i>
+                    Order now <i className="ri-arrow-right-s-line"></i>
                   </button>
 
                   <button className="all__foods-btn">
-                    <Link to="/foods">See all foods</Link>
+                    <Link to="/foods">See all dishes</Link>
                   </button>
                 </div>
 
                 <div className=" hero__service  d-flex align-items-center gap-5 mt-5 ">
                   <p className=" d-flex align-items-center gap-2 ">
                     <span className="shipping__icon">
-                      <i class="ri-car-line"></i>
+                      <i className="ri-car-line"></i>
                     </span>{" "}
-                    No shipping charge
+                    No shipping charges
                   </p>
 
                   <p className=" d-flex align-items-center gap-2 ">
                     <span className="shipping__icon">
-                      <i class="ri-shield-check-line"></i>
+                      <i className="ri-shield-check-line"></i>
                     </span>{" "}
                     100% secure checkout
                   </p>
@@ -150,17 +164,17 @@ const Home = () => {
           <Row>
             <Col lg="12" className="text-center">
               <h5 className="feature__subtitle mb-4">What we serve</h5>
-              <h2 className="feature__title">Just sit back at home</h2>
+              <h2 className="feature__title">Just stay home,</h2>
               <h2 className="feature__title">
                 we will <span>take care</span>
               </h2>
               <p className="mb-1 mt-4 feature__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-                officiis?
+                Stay home and enjoy quality food services as if you were live at the shop itself.
               </p>
               <p className="feature__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, eius.{" "}
+                Maintaining high moral standards with all clients is also one of our prioritized 
+                strong points. We don't joke with our customers and their remarks be it positive or negative. 
+                We keep trying to improve the on the positive remarks and work on the negative remarks to to catch up as soon as possible.{" "}
               </p>
             </Col>
 
@@ -186,7 +200,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2>Popular Foods</h2>
+              <h2>Most ordered dishes</h2>
             </Col>
 
             <Col lg="12">
@@ -259,42 +273,42 @@ const Home = () => {
                   Why <span>ChopOklok?</span>
                 </h2>
                 <p className="tasty__treat-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolorum, minus. Tempora reprehenderit a corporis velit,
-                  laboriosam vitae ullam, repellat illo sequi odio esse iste
-                  fugiat dolor, optio incidunt eligendi deleniti!
+                  You can only have the <strong>Best Service </strong>With us. 
+                  The ideology was derived from inborn passion for good food and as such, 
+                  justice has really been made from the results following the commendations, recommendation 
+                  and positive comments from our all faithful clients. <br/>
+                  As you want:
                 </p>
 
                 <ListGroup className="mt-4">
                   <ListGroupItem className="border-0 ps-0">
                     <p className=" choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Fresh and tasty
-                      foods
+                      <i className="ri-checkbox-circle-line"></i> Fresh and tasty
+                      global dishes
                     </p>
                     <p className="choose__us-desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quia, voluptatibus.
+                      Welcome home, our professional chefs got your back. Every item required to maintain all 
+                      food item's hygienic conditions are available and dishes are composed diet-wise.
                     </p>
                   </ListGroupItem>
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Quality support
+                      <i className="ri-checkbox-circle-line"></i> Quality support
                     </p>
                     <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
+                      Taking into consideration how congested our roads are, we've managed to master routes that 
+                      will lead us to you just in time with our diverse delivery servicesw. We always offer our best to make sure you are satisfied.
                     </p>
                   </ListGroupItem>
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i>Order from any
+                      <i className="ri-checkbox-circle-line"></i>Order from any
                       location{" "}
                     </p>
                     <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
+                      Distance used to define limits in services but with this, there is no barrier.
                     </p>
                   </ListGroupItem>
                 </ListGroup>
@@ -331,9 +345,8 @@ const Home = () => {
                   What our <span>customers</span> are saying
                 </h2>
                 <p className="testimonial__desc">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Distinctio quasi qui minus quos sit perspiciatis inventore
-                  quis provident placeat fugiat!
+                  Thanks for easing things to have made us discover this service. Distance would really have been a great 
+                  barrier but thanks to this online service that we could be served Fresh delicious meals just after some clicks.
                 </p>
 
                 <TestimonialSlider />

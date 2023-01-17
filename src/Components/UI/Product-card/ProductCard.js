@@ -4,8 +4,6 @@ import "../../../Styles/product-card.css";
 
 import { Link } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
-import { cartActions } from "../../../store/shopping-cart/cartSlice.js";
 
 const ProductCard = (props) => {
   const { id, title, image01, price } = props.item;

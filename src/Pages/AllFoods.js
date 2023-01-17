@@ -4,8 +4,8 @@ import React from 'react'
 
 const AllFoods = () => {
   return (
-    <div>AllFoods</div>
+    <div>All Dishes</div>
   )
 }
 
-export default AllFoods
+export default AllFoods;

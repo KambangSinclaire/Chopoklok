@@ -10,17 +10,18 @@ const nav_links = [
     path: "/home",
   },
   {
-    display: "Foods",
-    path: "/foods",
+    display: "Menu",
+    path: "/menu",
   },
   {
     display: "Cart",
-    path: "/cart",
+    path: "/cart_checkout",
   },
   {
     display: "Contact",
     path: "/contact",
   },
+  
 ];
 
 const Header = () => {
@@ -63,9 +64,16 @@ const Header = () => {
               </Link>
             </span>
 
+            <span className="user">
+              <Link to="/Notification">
+              <i class="ri-notification-4-line"></i>
+              </Link>
+            </span>
+
             <span className="mobile_menu" onClick={toggleMenu} >
               <i class="ri-menu-line"></i>
             </span>
+
           </div>
         </div>
       </Container>

@@ -1,0 +1,16 @@
+body {
+    background-color: #eee;
+  }
+
+  .main{
+    display: flex;
+    width: 100%;
+  }
+
+  .filter{
+    flex: 1/2;
+  }
+
+  .p-cards{
+    flex: 2/3;
+  }

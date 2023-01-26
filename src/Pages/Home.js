@@ -20,7 +20,6 @@ import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
 
-import ProductCard from "../Components/UI/Product-card/ProductCard.js";
 
 import whyImg from "../assets/Images/location.png";
 
@@ -182,7 +181,7 @@ const Home = () => {
       </section>
 
       
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -243,7 +242,7 @@ const Home = () => {
 
           </Row>
         </Container>
-      </section>
+      </section> */}
 
 
       <section className="why__choose-us">
@@ -305,7 +304,7 @@ const Home = () => {
       </section>
 
 
-      <section className="pt-0">
+      {/* <section className="pt-0">
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5 ">
@@ -319,7 +318,7 @@ const Home = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <section>
         <Container>

@@ -10,16 +10,24 @@ import {
   MDBBtn,
   MDBRipple,
 } from "mdb-react-ui-kit";
-
-
-
+// import Products from "../../assets/Data/Products";
 import '../../Styles/menu.css';
-import Products from "../../assets/Data/Products";
+ import Products from "../../assets/Data/Products";
 
 function Menu() {
      const product2 = Products;
 
-     
+    //  function addToCart(item) {
+    //     let basket2 = [...cart]
+    //     basket2.push({ ...item })
+    //     products.map((i) => {
+    //       if (i.id === item.id) {
+    //         i.basket = true
+    //       }
+    //     })
+    //     setCart(basket2)
+    
+    //   }
 
   return (<>
       <div className="main">

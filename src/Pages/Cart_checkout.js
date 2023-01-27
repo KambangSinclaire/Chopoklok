@@ -23,17 +23,7 @@ import {
 const prod3 = Products
 const [cart, setCart] = useState([])
 const [products, setProducts] = useState(prod3);
-function addToCart(item) {
-    let basket2 = [...cart]
-    basket2.push({ ...item })
-    products.map((i) => {
-      if (i.id === item.id) {
-        i.basket = true
-      }
-    })
-    setCart(basket2)
 
-  }
   function removeFromCart(item) {
     let basket2 = cart.filter((i) => i.id !== item.id)
     products.map((i) => {

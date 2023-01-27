@@ -64,7 +64,7 @@ const Header = () => {
             </span>
 
             <span className="mobile_menu" onClick={toggleMenu} >
-              <i className="ri-menu-line"></i>
+              <i class="ri-menu-line"></i>
             </span>
           </div>
         </div>

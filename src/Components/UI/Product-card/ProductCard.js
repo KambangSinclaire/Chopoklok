@@ -9,10 +9,10 @@ import { cartActions } from "../../../store/shopping-cart/cartSlice.js";
 
 const ProductCard = (props) => {
   const { id, title, image01, price } = props.item;
-/*   const dispatch = useDispatch();
+ /*  const dispatch = useDispatch(); */
 
-  const addToCart = () => {
-    dispatch(
+  const AddToCart = () => {
+    useDispatch(
       cartActions.addItem({
         id,
         title,
@@ -20,7 +20,7 @@ const ProductCard = (props) => {
         price,
       })
     );
-  }; */
+  }; 
 
   return (
     <div className="product__item">
@@ -34,7 +34,7 @@ const ProductCard = (props) => {
         </h5>
         <div className=" d-flex align-items-center justify-content-between ">
           <span className="product__price">${price}</span>
-          <button className="addTOCart__btn"/*  onClick={addToCart} */>
+          <button className="addTOCart__btn" onClick={AddToCart} >
             Add to Cart
           </button>
         </div>

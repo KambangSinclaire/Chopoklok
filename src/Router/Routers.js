@@ -18,6 +18,7 @@ import New from "../Components/Dashboard/New";
 import { productInputs, userInputs } from "../formSource";
 import CartCheckout from "../Pages/Cart_checkout";
 import { AuthContext } from "../Components/Context/AuthContext";
+import Menu from "../Pages/Menu";
 
 const Routers = () => {
   
@@ -30,7 +31,7 @@ console.log(currentUser)
     <Routes>
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/foods" element={<AllFoods />} />
+      <Route path="/menu" element={<Menu />} />
       <Route path="/foods/:id" element={<FoodDetails />} />
       <Route path="/cart-checkout" element={<CartCheckout />} />
       {/* <Route path='/checkout' element={<Checkout/>} /> */}

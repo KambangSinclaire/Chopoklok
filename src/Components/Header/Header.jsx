@@ -10,7 +10,7 @@ const nav_links = [
     path: "/home",
   },
   {
-    display: "Foods",
+    display: "All food Gallery",
     path: "/foods",
   },
   {

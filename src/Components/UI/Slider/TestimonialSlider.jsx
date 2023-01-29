@@ -40,7 +40,7 @@ const TestimonialSlider = () => {
       </div>
       <div>
         <p className="review__text">
-          OMG! Short of words, simply the best I have had in recent times. 
+          OMG! Short of words, simply the best I've had in recent times. 
         </p>
         <div className="slider__content d-flex align-items-center gap-3 ">
           <img src={ava03} alt="avatar" className=" rounded" />

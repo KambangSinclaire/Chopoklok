@@ -20,13 +20,13 @@ import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
 
-import ProductCard from "../Components/UI/Product-card/ProductCard.js";
+import ProductCard from "../Components/UI/Product-card/ProductCard.jsx";
 
 import whyImg from "../assets/Images/location.png";
 
 import networkImg from "../assets/Images/network.png";
 
-import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js";
+import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.jsx";
 const featureData = [
   {
     title: "Quick Delivery",
@@ -200,7 +200,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2>Most ordered dishes</h2>
+              <h2>Just make a choice from the list below</h2>
             </Col>
 
             <Col lg="12">
@@ -345,8 +345,10 @@ const Home = () => {
                   What our <span>customers</span> are saying
                 </h2>
                 <p className="testimonial__desc">
-                  Thanks for easing things to have made us discover this service. Distance would really have been a great 
-                  barrier but thanks to this online service that we could be served Fresh delicious meals just after some clicks.
+                  Thanks for easing things for us. This service is a milestone in modern day tech 
+                  and discovering it is grace. Distance would really have been a great 
+                  barrier but thanks to this online service that we could be served Fresh 
+                  delicious meals just after some clicks.
                 </p>
 
                 <TestimonialSlider />
@@ -359,11 +361,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-
-
       
-      
-
     </Helmet>
   )
 }

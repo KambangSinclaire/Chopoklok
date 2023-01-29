@@ -3,13 +3,15 @@ import Header  from '../Header/Header.js';
 import Footer from '../Footer/Footer.js';
 import Routes from '../../Router/Routers'
 const Layout = () => {
+  
+
   return (
     <div>
-        <Header/>
+        {/*  <Header/>  */}
         <div>
             <Routes/>
         </div>
-        <Footer />
+        {/*  <Footer />  */}
     </div>
   )
 }

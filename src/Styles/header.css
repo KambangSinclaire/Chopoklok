@@ -4,7 +4,7 @@
     line-height: 80px;
  }
 
- .logo{
+ .logo h5{
     text-align: center;
  }
 
@@ -26,6 +26,14 @@
     font-weight: 600;
     font-size: 1rem;
     color: #212245;
+    text-decoration: none;
+    
+ }
+
+ .nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
  }
 
  .menu a:hover{
@@ -99,6 +107,7 @@ cursor: pointer;
         background: rgba(0,0,0,0.534);
         z-index: 99;
         display: none;
+        
     }
     .menu{
         position: absolute;

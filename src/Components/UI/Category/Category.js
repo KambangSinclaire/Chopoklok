@@ -15,17 +15,17 @@ const categoryData = [
     imgUrl: categoryImg01,
   },
   {
-    display: "Pizza",
+    display: "Ice Cream",
     imgUrl: categoryImg02,
   },
 
   {
-    display: "Asian Food",
+    display: "Local Cuisine",
     imgUrl: categoryImg03,
   },
 
   {
-    display: "Row Meat",
+    display: "Beverages",
     imgUrl: categoryImg04,
   },
 ];

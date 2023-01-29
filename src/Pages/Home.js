@@ -20,13 +20,13 @@ import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
 
-import ProductCard from "../Components/UI/Product-card/ProductCard.js";
-
+/* import ProductCard from "../Components/UI/Product-card/ProductCard.js";
+ */
 import whyImg from "../assets/Images/location.png";
 
 import networkImg from "../assets/Images/network.png";
 
-import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js";
+/* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
   {
     title: "Quick Delivery",

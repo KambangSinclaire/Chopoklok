@@ -7,14 +7,17 @@ import "remixicon/fonts/remixicon.css"
 import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter as Router} from 'react-router-dom'
+import { AuthContextProvider } from './Components/Context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AuthContextProvider>
     <Router >
     <App />
-    
     </Router>
+    </AuthContextProvider>
+   
    
   </React.StrictMode>
 );

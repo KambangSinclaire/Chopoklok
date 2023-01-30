@@ -7,11 +7,11 @@ const Layout = () => {
 
   return (
     <div>
-        {/*  <Header/>  */}
+         <Header/>
         <div>
             <Routes/>
         </div>
-        {/*  <Footer />  */}
+        <Footer />  
     </div>
   )
 }

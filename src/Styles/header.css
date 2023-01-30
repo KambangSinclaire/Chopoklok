@@ -50,7 +50,7 @@
    color: #df2020; 
 }
 
-.cart_icon i, .user, .mobile_menu i{
+.cart_icon i, .user i, .mobile_menu i{
 font-size: 1.3rem;
 color: #212245;
 cursor: pointer;

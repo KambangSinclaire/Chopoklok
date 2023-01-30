@@ -3,16 +3,10 @@
 // }
 // export default Notify;
 
-
-
-
-
-
-
 const Notify = () => {
     return (
-        <div className="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700" id="notification">
-            <div className="2xl:w-4/12 bg-gray-50 h-screen overflow-y-auto p-8 absolute right-0">
+        <div className="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700 bg-blue-200" id="notification">
+            <div className="2xl:w-4/12 bg-gray-50 h-screen overflow-y-auto p-8 absolute left-0 bg-black-100">
                 <div className="flex items-center justify-between">
                     <p className="text-2xl font-semibold leading-6 text-gray-800">Notifications</p>
                     <div className="cursor-pointer" onclick="notificationHandler(false)">

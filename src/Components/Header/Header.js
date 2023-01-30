@@ -10,8 +10,8 @@ const nav_links = [
     path: "/home",
   },
   {
-    display: "Foods",
-    path: "/foods",
+    display: "Menu",
+    path: "/menu",
   },
   {
     display: "Cart",

@@ -17,7 +17,12 @@ import "../Styles/menu.css";
 function Menu() {
   const product2 = Products;
   return (<>
-    <div className="main">
+    <motion.div className="main"
+    
+    initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    exit={{ Y: 0, transition: { duration: 1.5 } }}
+    >
       <div className="filter">
           <h1>Filtering Products</h1>
       </div>
@@ -169,7 +174,7 @@ function Menu() {
     </MDBRow>
   </MDBContainer>
       </div>
-    </div>
+    </motion. div>
   
 </>
 );

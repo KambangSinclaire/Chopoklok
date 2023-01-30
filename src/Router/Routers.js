@@ -1,17 +1,10 @@
 import React, { useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-
-
-import React from 'react'
-import {Routes, Route, Navigate} from 'react-router-dom'
-
-import Home from '../Pages/Home';
-
 // import Cart from '../Pages/Cart';
 // import Checkout from '../Pages/Checkout';
 import Contact from '../Pages/Contact';
-import Login from '../Pages/Login';
+import Login from '../Components/Dashboard/Login'
 import Register from '../Pages/Register';
 import Notify from '../Pages/Notification';
 import Cart_checkout from '../Pages/Cart_checkout';
@@ -19,12 +12,9 @@ import Menu from '../modules/components/Menu';
 import ProductCard from '../Pages/ProductCard';
 import Home from "../Pages/Home";
 import AllFoods from "../Pages/AllFoods";
-import FoodDetails from "../Pages/FoodDetails";
+
 /* import Cart from '../Pages/Cart'; */
 /* import Checkout from '../Pages/Checkout'; */
-import Contact from "../Pages/Contact";
-import Login from "../Components/Dashboard/Login";
-import Register from "../Pages/Register";
 /* import Dashboard from '../Pages/Dashboard'; */
 //import Nav from '../Components/Dashboard/Dash_Nav'
 import Dashboard from "../Components/Dashboard/Dashboard";
@@ -33,8 +23,8 @@ import Single from "../Components/Dashboard/Single";
 import New from "../Components/Dashboard/New";
 import { productInputs, userInputs } from "../formSource";
 import CartCheckout from "../Pages/Cart_checkout";
-import { AuthContext } from "../Components/Context/AuthContext";
-import Menu from "../Pages/Menu";
+ import { AuthContext } from "../Components/Context/AuthContext";
+// import Menu from "../Pages/Menu";
   
 
 // const Routers = () => {
@@ -63,7 +53,6 @@ const Routers = () => {
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home />} />
       <Route path="/menu" element={<Menu />} />
-      {/* <Route path="/foods/:id" element={<FoodDetails />} /> */}
       <Route path="/cart-checkout" element={<Cart_checkout />} />
       {/* <Route path='/checkout' element={<Checkout/>} /> */}
       <Route path="/login" element={<Login />} />

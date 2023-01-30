@@ -15,7 +15,7 @@ const nav_links = [
   },
   {
     display: "Cart",
-    path: "/cart_checkout",
+    path: "/cart-checkout",
   },
   {
     display: "Contact",

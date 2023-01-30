@@ -1,7 +1,7 @@
-import React from 'react'
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import React from "react";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import '../Styles/cart_checkout.css'
+import "../Styles/cart_checkout.css";
 import {
   MDBBtn,
   MDBCard,
@@ -14,10 +14,17 @@ import {
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
+import { motion } from "framer-motion";
 
 export default function CartCheckout() {
   return (
-    <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+    <motion.section
+      className="h-100 h-custom"
+      style={{ backgroundColor: "#eee" }}
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ Y: 0, transition: { duration: 1.5 } }}
+    >
       <MDBContainer className="h-100 py-5">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol>
@@ -250,6 +257,6 @@ export default function CartCheckout() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-    </section>
+    </motion.section>
   );
 }

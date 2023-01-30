@@ -3,12 +3,12 @@
 import React, {useState, useEffect} from 'react';
  import Helmet from '../Components/Helmet/Helmet.js';
  import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
- import heroImg from '../assets/Images/hero.png';
+ 
  import '../Styles/hero-section.css';
  import {Link} from 'react-router-dom';
  import Category from "../Components/UI/Category/Category.js";
 
-import '../Styles/home.css'
+import '../Styles/home.css';
 
 import featureImg01 from "../assets/Images/service-01.webp";
 import featureImg02 from "../assets/Images/service-02.webp";
@@ -20,12 +20,13 @@ import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
 
-
+/* import ProductCard from "../Components/UI/Product-card/ProductCard.js";
+ */
 import whyImg from "../assets/Images/location.png";
 
 import networkImg from "../assets/Images/network.png";
 
-import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js";
+/* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
   {
     title: "Quick Delivery",
@@ -47,7 +48,7 @@ const featureData = [
 
 
 const Home = () => {
-  const [category, setCategory] = useState("ALL");
+/*   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
   const [hotPizza, setHotPizza] = useState([]); 
@@ -86,7 +87,7 @@ const Home = () => {
 
       setAllProducts(filteredProducts);
     }
-  }, [Category]);
+  }, [Category]); */
   return (
     <Helmet title='Home'>
       <section>
@@ -96,18 +97,18 @@ const Home = () => {
               <div className="hero__content  ">
                 <h5 className="mb-3">Easy way to make an order</h5>
                 <h1 className="mb-4 hero__title">
-                  <span>HUNGRY?</span> Just wait <br /> food at
-                  <span> your door</span>
+                  <span>HUNGRY?</span> Sign up <br /> and have food deliverd
+                  <span></span>
                 </h1>
 
-                <p>
+               {/*  <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
                   magni delectus tenetur autem, sint veritatis!
-                </p>
+                </p> */}
 
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
                   <button className="order__btn d-flex align-items-center justify-content-between">
-                    Order now <i class="ri-arrow-right-s-line"></i>
+                    Order now <i className="ri-arrow-right-s-line"></i>
                   </button>
 
                   <button className="all__foods-btn">
@@ -118,14 +119,14 @@ const Home = () => {
                 <div className=" hero__service  d-flex align-items-center gap-5 mt-5 ">
                   <p className=" d-flex align-items-center gap-2 ">
                     <span className="shipping__icon">
-                      <i class="ri-car-line"></i>
+                      <i className="ri-car-line"></i>
                     </span>{" "}
-                    No shipping charge
+                    Cheap Transportation
                   </p>
 
                   <p className=" d-flex align-items-center gap-2 ">
                     <span className="shipping__icon">
-                      <i class="ri-shield-check-line"></i>
+                      <i className="ri-shield-check-line"></i>
                     </span>{" "}
                     100% secure checkout
                   </p>
@@ -135,7 +136,7 @@ const Home = () => {
 
             <Col lg="6" md="6">
               <div className="hero__img">
-                <img src={heroImg} alt="hero-img" className="w-100" />
+                <img src='../Image/hero.png' alt="hero-img" className="w-100" />
               </div>
             </Col>
           </Row>
@@ -245,63 +246,6 @@ const Home = () => {
       </section> */}
 
 
-      <section className="why__choose-us">
-        <Container>
-          <Row>
-            <Col lg="6" md="6">
-              <img src={whyImg} alt="why-tasty-treat" className="w-100" />
-            </Col>
-
-            <Col lg="6" md="6">
-              <div className="why__tasty-treat">
-                <h2 className="tasty__treat-title mb-4">
-                  Why <span>ChopOklok?</span>
-                </h2>
-                <p className="tasty__treat-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolorum, minus. Tempora reprehenderit a corporis velit,
-                  laboriosam vitae ullam, repellat illo sequi odio esse iste
-                  fugiat dolor, optio incidunt eligendi deleniti!
-                </p>
-
-                <ListGroup className="mt-4">
-                  <ListGroupItem className="border-0 ps-0">
-                    <p className=" choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Fresh and tasty
-                      foods
-                    </p>
-                    <p className="choose__us-desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quia, voluptatibus.
-                    </p>
-                  </ListGroupItem>
-
-                  <ListGroupItem className="border-0 ps-0">
-                    <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Quality support
-                    </p>
-                    <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
-                    </p>
-                  </ListGroupItem>
-
-                  <ListGroupItem className="border-0 ps-0">
-                    <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i>Order from any
-                      location{" "}
-                    </p>
-                    <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
-                    </p>
-                  </ListGroupItem>
-                </ListGroup>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
 
 
       {/* <section className="pt-0">
@@ -320,7 +264,63 @@ const Home = () => {
         </Container>
       </section> */}
 
-      <section>
+
+      <section className="why__choose-us">
+        <Container>
+          <Row>
+            <Col lg="6" md="6">
+              <img src={whyImg} alt="why-tasty-treat" className="w-100" />
+            </Col>
+
+            <Col lg="6" md="6">
+              <div className="why__tasty-treat">
+                <h2 className="tasty__treat-title mb-4">
+                  Why <span>ChopOklok?</span>
+                </h2>
+                <p className="tasty__treat-desc">
+                This project’s idea has been buckled into the name chopoklok. Chopoklok is a word made out of two words i.e chop and o’clock. Chop is a pidgin English word that means eat and oklok is thought to be the simpler form of o’clock which means time.
+                </p>
+
+                <ListGroup className="mt-4">
+                  <ListGroupItem className="border-0 ps-0">
+                    <p className=" choose__us-title d-flex align-items-center gap-2 ">
+                      <i className="ri-checkbox-circle-line"></i> Fresh and tasty
+                      foods
+                    </p>
+                    <p className="choose__us-desc">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quia, voluptatibus.
+                    </p>
+                  </ListGroupItem>
+
+                  <ListGroupItem className="border-0 ps-0">
+                    <p className="choose__us-title d-flex align-items-center gap-2 ">
+                      <i className="ri-checkbox-circle-line"></i> Quality support
+                    </p>
+                    <p className="choose__us-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Qui, earum.
+                    </p>
+                  </ListGroupItem>
+
+                  <ListGroupItem className="border-0 ps-0">
+                    <p className="choose__us-title d-flex align-items-center gap-2 ">
+                      <i className="ri-checkbox-circle-line"></i>Order from any
+                      location{" "}
+                    </p>
+                    <p className="choose__us-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Qui, earum.
+                    </p>
+                  </ListGroupItem>
+                </ListGroup>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+     {/*  <section>
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -344,7 +344,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
 
       

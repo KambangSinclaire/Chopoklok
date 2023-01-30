@@ -19,14 +19,14 @@ const Footer = () => {
       <h5 className='footer_title'>Delivery Time</h5>
       <ListGroup>
         <ListGroupItem className='delivery_time-item border-0 ps-0'>
-          <span>Sunday - Thursday</span>
-          <p>10:00am - 11:00pm</p>
+          <span>Monday - Sunday</span>
+          <p>07:00am - 10:00pm</p>
         </ListGroupItem>
 
-        <ListGroupItem className='delivery_time-item  border-0 ps-0'>
-          <span>Friday - Saturday</span>
-          <p>Off day</p>
-        </ListGroupItem>
+        {/* <ListGroupItem className='delivery_time-item  border-0 ps-0'>
+          <span>Sunday</span>
+          <p>07:00am - 12:00pm</p>
+        </ListGroupItem> */}
       </ListGroup>
 
     </Col>
@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="newsletter">
         <input type="email" placeholder='Enter your email' />
         <span>
-          <i class="ri-send-plane-line"></i>
+          <i className="ri-send-plane-line"></i>
         </span>
       </div>
     </Col>
@@ -67,25 +67,25 @@ const Footer = () => {
       <span>
         {""}
       <Link to="">
-        <i class="ri-facebook-line"></i>
+        <i className="ri-facebook-line"></i>
       </Link>
       </span>
       <span>
         {""}
       <Link to="">
-        <i class="ri-github-line"></i>
+        <i className="ri-github-line"></i>
       </Link>
       </span>
       <span>
         {""}
       <Link to="">
-        <i class="ri-youtube-line"></i>
+        <i className="ri-youtube-line"></i>
       </Link>
       </span>
       <span>
         {""}
       <Link to="">
-        <i class="ri-linkedin-line"></i>
+        <i className="ri-linkedin-line"></i>
       </Link>{""}
       </span>
     </div>

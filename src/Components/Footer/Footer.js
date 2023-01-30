@@ -19,14 +19,14 @@ const Footer = () => {
       <h5 className='footer_title'>Delivery Time</h5>
       <ListGroup>
         <ListGroupItem className='delivery_time-item border-0 ps-0'>
-          <span>Monnday - Saturday</span>
-          <p>06:30am - 11:00pm</p>
+          <span>Monday - Sunday</span>
+          <p>07:00am - 10:00pm</p>
         </ListGroupItem>
 
-        <ListGroupItem className='delivery_time-item  border-0 ps-0'>
-          <span>Sundays</span>
-          <p>12:00pm - 10:00pm</p>
-        </ListGroupItem>
+        {/* <ListGroupItem className='delivery_time-item  border-0 ps-0'>
+          <span>Sunday</span>
+          <p>07:00am - 12:00pm</p>
+        </ListGroupItem> */}
       </ListGroup>
 
     </Col>

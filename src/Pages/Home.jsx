@@ -3,12 +3,12 @@
 import React, {useState, useEffect} from 'react';
  import Helmet from '../Components/Helmet/Helmet.js';
  import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
- import heroImg from '../assets/Images/hero.png';
+ 
  import '../Styles/hero-section.css';
  import {Link} from 'react-router-dom';
  import Category from "../Components/UI/Category/Category.js";
 
-import '../Styles/home.css'
+import '../Styles/home.css';
 
 import featureImg01 from "../assets/Images/service-01.webp";
 import featureImg02 from "../assets/Images/service-02.webp";
@@ -20,13 +20,14 @@ import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
 
-import ProductCard from "../Components/UI/Product-card/ProductCard.jsx";
-
+/* import ProductCard from "../Components/UI/Product-card/ProductCard.js";
+ */
 import whyImg from "../assets/Images/location.png";
 
 import networkImg from "../assets/Images/network.png";
+import Orders from './Orders.js';
 
-import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.jsx";
+/* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
   {
     title: "Quick Delivery",
@@ -48,7 +49,7 @@ const featureData = [
 
 
 const Home = () => {
-  const [category, setCategory] = useState("ALL");
+/*   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
   const [hotPizza, setHotPizza] = useState([]); 
@@ -87,7 +88,7 @@ const Home = () => {
 
       setAllProducts(filteredProducts);
     }
-  }, [Category]);
+  }, [Category]); */
   return (
     <Helmet title='Home'>
       <section>
@@ -97,32 +98,18 @@ const Home = () => {
               <div className="hero__content  ">
                 
                 <h1 className="mb-4 hero__title">
-                  <span>HUNGRY?</span> Our services <br /> are just at
-                  <span> your door step</span>
+                  <span>HUNGRY?</span> Sign up <br /> and have food delivered
+                  <span></span>
                 </h1>
-                <h4 className="mb-3"><em>Easy way to make an order</em></h4>
-                <p>
-                Welcome to Chopoklok, <strong>your favourite online Restaurant Service with no boundary. </strong>
-                <em>"We are just a tablet away". </em><br/>
-                The main idea behind chopoklok is to curb client-server arguments in food service setups(Restaurants). 
-                It seems to have been a noticed problem in food service setups (restaurants) when clients tend to complain 
-                of arriving earlier than others who’ve been served before them and the time it takes for a customer to think 
-                of choices before actually placing an order. 
-                This Web App(chopoklok) is to be created and made available online such that clients, either within or without 
-                the food service premise can take their time and navigate through the list of all available items, make their choices, 
-                places their orders and choose whether it should be delivered at their destinations or indicate if they are coming 
-                to pick their commands up themselves from the food service shop. 
-                We are confident that once this idea is realised, will solve this problem and minimise the client-server conflicts by 
-                making it possible for all client placed orders to be aligned in the kitchen just in the order in which they were 
-                submitted so that those working in the kitchen can follow the orders from the oldest on the order list down to the most 
-                recent thereby reducing complaints of delay in service.
-                So feel at home and place your order wherever and whenever.<br/>
-                <em> <strong>"We are at your service regionwide". </strong></em>
-                </p>
+
+               {/*  <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
+                  magni delectus tenetur autem, sint veritatis!
+                </p> */}
 
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
-                  <button className="order__btn d-flex align-items-center justify-content-between">
-                    Order now <i className="ri-arrow-right-s-line"></i>
+                  <button className="order__btn d-flex align-items-center justify-content-between color-white">
+                  <Link to="/Orders">Order now</Link> <i className="ri-arrow-right-s-line"></i>
                   </button>
 
                   <button className="all__foods-btn">
@@ -135,7 +122,7 @@ const Home = () => {
                     <span className="shipping__icon">
                       <i className="ri-car-line"></i>
                     </span>{" "}
-                    No shipping charges
+                    Cheap Transportation
                   </p>
 
                   <p className=" d-flex align-items-center gap-2 ">
@@ -150,7 +137,7 @@ const Home = () => {
 
             <Col lg="6" md="6">
               <div className="hero__img">
-                <img src={heroImg} alt="hero-img" className="w-100" />
+                <img src='../Image/hero.png' alt="hero-img" className="w-100" />
               </div>
             </Col>
           </Row>
@@ -196,7 +183,7 @@ const Home = () => {
       </section>
 
       
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -257,7 +244,26 @@ const Home = () => {
 
           </Row>
         </Container>
-      </section>
+      </section> */}
+
+
+
+
+      {/* <section className="pt-0">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5 ">
+              <h2>Hot Pizza</h2>
+            </Col>
+
+            {hotPizza.map((item) => (
+              <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
+                 <ProductCard item={item} /> 
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section> */}
 
 
       <section className="why__choose-us">
@@ -273,18 +279,14 @@ const Home = () => {
                   Why <span>ChopOklok?</span>
                 </h2>
                 <p className="tasty__treat-desc">
-                  You can only have the <strong>Best Service </strong>With us. 
-                  The ideology was derived from inborn passion for good food and as such, 
-                  justice has really been made from the results following the commendations, recommendation 
-                  and positive comments from our all faithful clients. <br/>
-                  As you want:
+                This project’s idea has been buckled into the name chopoklok. Chopoklok is a word made out of two words i.e chop and o’clock. Chop is a pidgin English word that means eat and oklok is thought to be the simpler form of o’clock which means time.
                 </p>
 
                 <ListGroup className="mt-4">
                   <ListGroupItem className="border-0 ps-0">
                     <p className=" choose__us-title d-flex align-items-center gap-2 ">
                       <i className="ri-checkbox-circle-line"></i> Fresh and tasty
-                      global dishes
+                      foods
                     </p>
                     <p className="choose__us-desc">
                       Welcome home, our professional chefs got your back. Every item required to maintain all 
@@ -318,24 +320,7 @@ const Home = () => {
         </Container>
       </section>
 
-
-      <section className="pt-0">
-        <Container>
-          <Row>
-            <Col lg="12" className="text-center mb-5 ">
-              <h2>Hot Pizza</h2>
-            </Col>
-
-            {hotPizza.map((item) => (
-              <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
-                 <ProductCard item={item} /> 
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      <section>
+     {/*  <section>
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -360,7 +345,9 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
+
+
       
     </Helmet>
   )

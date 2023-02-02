@@ -1,14 +1,13 @@
+import React, { useState, useEffect } from "react";
+import Helmet from "../Components/Helmet/Helmet.js";
+import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import {ToastContainer,toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import "../Styles/hero-section.css";
+import { Link } from "react-router-dom";
+import Category from "../Components/UI/Category/Category.js";
 
-
-import React, {useState, useEffect} from 'react';
- import Helmet from '../Components/Helmet/Helmet.js';
- import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
- 
- import '../Styles/hero-section.css';
- import {Link} from 'react-router-dom';
- import Category from "../Components/UI/Category/Category.js";
-
-import '../Styles/home.css';
+import "../Styles/home.css";
 
 import featureImg01 from "../assets/Images/service-01.webp";
 import featureImg02 from "../assets/Images/service-02.webp";
@@ -19,7 +18,7 @@ import products from "../assets/Data/Products.js";
 import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
-
+import { motion } from "framer-motion";
 /* import ProductCard from "../Components/UI/Product-card/ProductCard.js";
  */
 import whyImg from "../assets/Images/location.png";
@@ -47,9 +46,9 @@ const featureData = [
   },
 ];
 
-
 const Home = () => {
-/*   const [category, setCategory] = useState("ALL");
+  const notify  = () => toast("you must be logged in to view this page")
+  /*   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
   const [hotPizza, setHotPizza] = useState([]); 
@@ -90,7 +89,14 @@ const Home = () => {
     }
   }, [Category]); */
   return (
-    <Helmet title='Home'>
+    <motion.div
+    
+    initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    exit={{ Y: 0, transition: { duration: 1.5 } }}>
+
+<Helmet
+    >
       <section>
         <Container>
           <Row>
@@ -102,14 +108,14 @@ const Home = () => {
                   <span></span>
                 </h1>
 
-               {/*  <p>
+                {/*  <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
                   magni delectus tenetur autem, sint veritatis!
                 </p> */}
 
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
-                  <button className="order__btn d-flex align-items-center justify-content-between color-white">
-                  <Link to="/Orders">Order now</Link> <i className="ri-arrow-right-s-line"></i>
+                  <button className="order__btn d-flex align-items-center justify-content-between color-white"  onClick={notify}  >
+                  <Link to="/Orders"  >Order now</Link> <i className="ri-arrow-right-s-line"></i>
                   </button>
 
                   <button className="all__foods-btn">
@@ -137,7 +143,7 @@ const Home = () => {
 
             <Col lg="6" md="6">
               <div className="hero__img">
-                <img src='../Image/hero.png' alt="hero-img" className="w-100" />
+                <img src="../Image/hero.png" alt="hero-img" className="w-100" />
               </div>
             </Col>
           </Row>
@@ -182,7 +188,6 @@ const Home = () => {
         </Container>
       </section>
 
-      
       {/* <section>
         <Container>
           <Row>
@@ -246,9 +251,6 @@ const Home = () => {
         </Container>
       </section> */}
 
-
-
-
       {/* <section className="pt-0">
         <Container>
           <Row>
@@ -265,7 +267,6 @@ const Home = () => {
         </Container>
       </section> */}
 
-
       <section className="why__choose-us">
         <Container>
           <Row>
@@ -279,14 +280,18 @@ const Home = () => {
                   Why <span>ChopOklok?</span>
                 </h2>
                 <p className="tasty__treat-desc">
-                This project’s idea has been buckled into the name chopoklok. Chopoklok is a word made out of two words i.e chop and o’clock. Chop is a pidgin English word that means eat and oklok is thought to be the simpler form of o’clock which means time.
+                  This project’s idea has been buckled into the name chopoklok.
+                  Chopoklok is a word made out of two words i.e chop and
+                  o’clock. Chop is a pidgin English word that means eat and
+                  oklok is thought to be the simpler form of o’clock which means
+                  time.
                 </p>
 
                 <ListGroup className="mt-4">
                   <ListGroupItem className="border-0 ps-0">
                     <p className=" choose__us-title d-flex align-items-center gap-2 ">
-                      <i className="ri-checkbox-circle-line"></i> Fresh and tasty
-                      foods
+                      <i className="ri-checkbox-circle-line"></i> Fresh and
+                      tasty foods
                     </p>
                     <p className="choose__us-desc">
                       Welcome home, our professional chefs got your back. Every item required to maintain all 
@@ -296,7 +301,8 @@ const Home = () => {
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i className="ri-checkbox-circle-line"></i> Quality support
+                      <i className="ri-checkbox-circle-line"></i> Quality
+                      support
                     </p>
                     <p className="choose__us-desc">
                       Taking into consideration how congested our roads are, we've managed to master routes that 
@@ -320,7 +326,7 @@ const Home = () => {
         </Container>
       </section>
 
-     {/*  <section>
+      {/*  <section>
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -346,11 +352,11 @@ const Home = () => {
           </Row>
         </Container>
       </section> */}
-
-
-      
     </Helmet>
-  )
-}
+    <ToastContainer />
+    </motion.div>
+    
+  );
+};
 
-export default Home; 
+export default Home;

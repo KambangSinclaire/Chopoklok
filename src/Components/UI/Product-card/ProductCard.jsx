@@ -4,6 +4,8 @@ import "../../../Styles/product-card.css";
 
 import { Link } from "react-router-dom";
 
+import AddToCart from "./AddToCart";
+
 
 const ProductCard = (props) => {
   const { id, title, image01, price } = props.item;
@@ -32,7 +34,7 @@ const ProductCard = (props) => {
         </h5>
         <div className=" d-flex align-items-center justify-content-between ">
           <span className="product__price">${price}</span>
-          <button className="addTOCart__btn"/*  onClick={addToCart} */>
+          <button className="addTOCart__btn" /* onClick={AddToCart} */>
             Add to Cart
           </button>
         </div>

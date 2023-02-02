@@ -1,0 +1,64 @@
+.food_category {
+    background: #df2020;
+    text-align: center;
+    margin-top: 30px;
+    padding:0px 20px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.food_category button {
+    border: none;
+    outline: none;
+    padding: 20px 7px;
+    background: transparent;
+    color: #fff;
+}
+
+.food_category button img{
+    width:50px;
+    height:50px;
+}
+
+.foodBtnAction {
+    background: #fff !important;
+    border-radius: 5px;
+    color: #df2020 !important;
+}
+
+.food__category {
+    background: #df2020;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0px;
+    border-radius: 8px;
+    position: sticky;
+  }
+  
+  .food__category button {
+    border: none;
+    outline: none;
+    padding: 20px 20px;
+    background: transparent;
+    color: #fff;
+  }
+  
+  .food__category button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .foodBtnActive {
+    background: #fff !important;
+    border-radius: 5px;
+    color: #df2020 !important;
+  }
+  
+
+  .filter h1{
+    font-size: 15px;
+    width: 100%;
+    background: #abcdef;
+    border-radius: 5px;
+  }

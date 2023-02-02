@@ -1,3 +1,28 @@
 body {
     background-color: #eee;
   }
+
+  .main{
+    display: flex;
+    width: 100%;
+  }
+
+  .filter{
+    width: 10%;
+  }
+
+  .filter h1{
+    font-size: 15px;
+    width: 100%;
+    background: #abcdef;
+    border-radius: 5px;
+  }
+
+  .p-cards{
+    width: 90%;
+  }
+
+  .order__btn {
+    color: #fff;
+    text-decoration: none;
+  }

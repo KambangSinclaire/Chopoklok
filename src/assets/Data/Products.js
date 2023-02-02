@@ -26,7 +26,7 @@ import product_06_image_02 from "../Images/bread(2).png";
 import product_06_image_03 from "../Images/bread(3).png";
 
 
-const products = [
+const Products = [
   {
     id: 1,
     title: "Chicken Burger",
@@ -183,4 +183,4 @@ const products = [
   },
 ];
 
-export default products;
+export default Products;

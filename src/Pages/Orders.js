@@ -37,7 +37,7 @@ function Orders() {
 
   
   const [text, setText] = useState("")
-  const [fullText, setFullText] = useState(
+  const [fullText] = useState(
       "Filtering products by category."
     )
   const [index, setIndex] = useState(0);

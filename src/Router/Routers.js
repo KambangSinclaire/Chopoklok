@@ -24,6 +24,10 @@ import { AuthContextProvider } from "../context/Authcontext";
 import ProtectedRoute from "../Pages/protectedRoute";
 import { AnimatePresence } from "framer-motion";
 import Account from "../Pages/Account";
+import Orders from "../Pages/Orders";
+
+
+
 const Routers = () => {
   // const { currentUser } = useContext(AuthContext);
   // const RequireAuth = ({ childern }) => {
@@ -37,12 +41,16 @@ const Routers = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/orders" element={ <Orders />
+          
+          } />
           <Route path="/menu" element={<Menu />} />
           <Route path="/foods/:id" element={<FoodDetails />} />
           <Route path="/cart-checkout" element={<CartCheckout />} />
           {/* <Route path='/checkout' element={<Checkout/>} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={ <ProtectedRoute>
                 <Dashboard />

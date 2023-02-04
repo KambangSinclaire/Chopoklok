@@ -21,7 +21,7 @@ function Signup() {
     if (regEx.test(password)) {
       setMessage("password is  valid");
     } else if (!regEx.test(password)) {
-      setMessage("Password should at least have 8 to 16 characters");
+      setMessage("atleast 8 characters");
     } else {
       setMessage("");
     }
@@ -47,25 +47,34 @@ function Signup() {
     >
       <div className="contact-wrapper1">
         <div>
-          <h1 className="contact-header">Sign up an Account </h1>
+          <h2 className="contact-header">Create an Account </h2>
         </div>
 
         <form onSubmit={handleSubmit}>
+        <div className="contact-input">
+          <label>Name</label>
+          <input type="text" placeholder="Name"  className="input-text" />
+          </div>
           <div className="contact-input">
-            <label>Email Address</label>
+          <label>Email</label>
+          
             <input
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               name="email"
+              placeholder="Email"
+              className="input-text"
             />
           </div>
+       
           <div className="contact-input">
-            <label>Password</label>
+          <label>Password</label>
             <div className="wrap">
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 type={show ? "text" : "password"}
-                name="password"
+                name="password" placeholder="Password"
+                className="input-text"
               />
               <img
                 onClick={handleShow}
@@ -95,8 +104,8 @@ function Signup() {
           </div>
         </form>
       </div>
-      <div>
-        {/* <img src="../Image/location.png" alt="hero-img" className="w-50" /> */}
+      <div className="contact-wrapper2" >
+        <img src="../Image/tree.jpeg" alt="hero-img" className="signup-image" />
       </div>
     </motion.div>
   );

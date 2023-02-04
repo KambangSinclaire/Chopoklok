@@ -41,7 +41,7 @@ const Routers = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/orders" element={ <ProtectedRoute><Orders /></ProtectedRoute>
+          <Route path="/orders" element={ <Orders />
           
           } />
           <Route path="/menu" element={<Menu />} />
@@ -50,6 +50,7 @@ const Routers = () => {
           {/* <Route path='/checkout' element={<Checkout/>} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={ <ProtectedRoute>
                 <Dashboard />

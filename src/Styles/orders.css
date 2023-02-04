@@ -24,11 +24,11 @@
 .foodBtnAction {
     background: #fff !important;
     border-radius: 5px;
-    color: #df2020 !important;
+    color: #0210209f !important;
 }
 
 .food__category {
-    background: #df2020;
+    background: #0210209f;
     text-align: center;
     margin-top: 30px;
     padding: 20px 0px;
@@ -43,6 +43,10 @@
     background: transparent;
     color: #fff;
   }
+
+  .food__category button:hover {
+    font-size: 0.5rem;
+  }
   
   .food__category button img {
     width: 20px;
@@ -52,13 +56,20 @@
   .foodBtnActive {
     background: #fff !important;
     border-radius: 5px;
-    color: #df2020 !important;
+    color: #0210209f!important;
   }
   
+
+  .filter{
+    width: 10%;
+    margin: 120px 0px 0px 10px;
+    justify-items: center;
+  }
 
   .filter h1{
     font-size: 15px;
     width: 100%;
-    background: #abcdef;
     border-radius: 5px;
   }
+
+  

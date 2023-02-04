@@ -31,7 +31,7 @@ function Signin() {
     >
       <div className="contact-wrapper1">
         <div>
-          <h1 className="contact-header">Sign Into Account</h1>
+          <h2 className="contact-header">Sign Into Account</h2>
        
         </div>
         <form onSubmit={handleSubmit}>
@@ -41,6 +41,7 @@ function Signin() {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               name="email"
+              className="input-text"
             />
           </div>
           <div className="contact-input">
@@ -49,6 +50,7 @@ function Signin() {
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               name="email"
+              className="input-text"
             />
           </div>
           <div className="btnres">
@@ -56,19 +58,25 @@ function Signin() {
               <button className="btn1">Sign In</button>
             </div>
           </div>
+          <p className="message"></p>
           <p className="contact-text">
-            Dont have an account?
+            Dont have an account? 
             <Link className="link" to="/signup">
               {" "}
               Signup
             </Link>
           </p>
         </form>
+        <div className="contact-social">
+            <img className="contact-icon" src="../Image/facebook.png" alt="" />
+            <img className="contact-icon" src="../Image/instagram.png" alt="" />
+            <img className="contact-icon" src="../Image/whatsapp.png" alt="" />
+          </div>
       </div>
       <div>
         <img
           className="signup-image"
-          src="./image/pngwing.com.png"
+          src="./image/drone.jpeg"
           alt=""
         />
       </div>

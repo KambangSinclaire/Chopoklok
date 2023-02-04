@@ -26,16 +26,31 @@
   .product__price {
     font-weight: 600;
     font-size: 1.2rem;
-    color: #df2020;
+    color: #0210209f;
+  }
+
+  .product__price:hover {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #000;
   }
   
   .addTOCart__btn {
     border: none;
     padding: 7px 25px;
-    background: #df2020;
+    background: #0210209f;
     color: #fff;
     border-radius: 5px;
     font-size: 0.9rem;
+  }
+
+  .addTOCart__btn:hover {
+    border: none;
+    padding: 7px 25px;
+    background: #0210209f;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
   }
   
   @media only screen and (max-width: 992px) {

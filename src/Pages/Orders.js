@@ -17,13 +17,14 @@ import { Link, useNavigate } from "react-router-dom";
 import products from "../assets/Data/Products";
 import React, { useState, useEffect } from "react";
 import Filters from "./Filters";
-
+import Animate from './textAnimator';
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 import featureImg01 from "../assets/Images/service-01.webp";
 import featureImg02 from "../assets/Images/service-02.webp";
 import featureImg03 from "../assets/Images/service-03.webp";
 
+import { StickyContainer, Sticky } from 'react-sticky';
 import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
@@ -32,6 +33,25 @@ import ProductCard from '../Components/UI/Product-card/ProductCard';
 import category from "../Components/UI/Category/Category";
 
 function Orders() {
+
+
+  
+  const [text, setText] = useState("")
+  const [fullText, setFullText] = useState(
+      "Filtering products by category."
+    )
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      setTimeout(() => {
+        setText(text + fullText[index])
+        setIndex(index + 1)
+      }, 40)
+    }
+  }, [index])
+
+
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
@@ -74,6 +94,7 @@ function Orders() {
       }
     }, [category]);
     
+    
   return (
   <>
     <motion.div className="main"
@@ -83,20 +104,20 @@ function Orders() {
     exit={{ Y: 0, transition: {duration: 1.5} }}
     >
       <div className="filter">
-          <h1>Filtering Products by Category</h1>
+          <h2>{text}</h2>
           <section >
            <Col lg="12">
              <div className = "food__category d-block align-items-center justify-content-center mb-1">
-               <button className="all__button m-0" onClick={() => setCategory('ALL')}>All</button>
-               <button className="d-block align-items-center m-0" onClick={() => setCategory('BURGER')}>
+               <button className="category__btn all__button m-0" onClick={() => setCategory('ALL')}>All</button>
+               <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BURGER')}>
                  <img src={foodCategoryImg01} alt=""/>
                  Burger
                </button>
-               <button className="d-block align-items-center m-0" onClick={() => setCategory('PIZZA')}>
+               <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('PIZZA')}>
                  <img src={foodCategoryImg02} alt=""/>
                  Pizza
                </button>
-               <button className="d-block align-items-center m-0" onClick={() => setCategory('BREAD')}>
+               <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BREAD')}>
                  <img src={foodCategoryImg03} alt=""/>
                  Bread
                </button>
@@ -106,8 +127,8 @@ function Orders() {
       </div>
       <div className="p-cards">
       <MDBContainer>
-    <h4 className="mt-5 text-align-center align-items-center justify-content-center">
-      <strong>Order List</strong>
+    <h4 className="mt-5 mb-0 align-items-center">
+      <strong className="align-items-center">Order List</strong>
     </h4>
 
     <MDBRow>

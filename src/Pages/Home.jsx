@@ -8,23 +8,18 @@ import { Link } from "react-router-dom";
 import Category from "../Components/UI/Category/Category.js";
 
 import "../Styles/home.css";
+//import "../Styles/menu.css";
 
 import featureImg01 from "../assets/Images/service-01.webp";
 import featureImg02 from "../assets/Images/service-02.webp";
 import featureImg03 from "../assets/Images/service-03.webp";
 
-import products from "../assets/Data/Products.js";
-
-import foodCategoryImg01 from "../assets/Images/hamburger.png";
-import foodCategoryImg02 from "../assets/Images/pizza.png";
-import foodCategoryImg03 from "../assets/Images/bread.png";
 import { motion } from "framer-motion";
 /* import ProductCard from "../Components/UI/Product-card/ProductCard.js";
  */
 import whyImg from "../assets/Images/location.png";
 
-import networkImg from "../assets/Images/network.png";
-import Orders from './Orders.js';
+
 
 /* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
@@ -47,7 +42,7 @@ const featureData = [
 ];
 
 const Home = () => {
-  const notify  = () => toast("you must be logged in to view this page")
+  const notify  = () => toast("Sorry, you must be logged in to view this page")
   /*   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
@@ -115,11 +110,11 @@ const Home = () => {
 
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
                   <button className="order__btn d-flex align-items-center justify-content-between color-white"  onClick={notify}  >
-                  <Link to="/Orders"  >Order now</Link> <i className="ri-arrow-right-s-line"></i>
+                  <Link to="/orders">Order now</Link> <i className="ri-arrow-right-s-line"></i>
                   </button>
 
                   <button className="all__foods-btn">
-                    <Link to="/foods">See all dishes</Link>
+                    <Link to="/menu" >See Available Dishes</Link> <i className="ri-arrow-right-s-line"></i>
                   </button>
                 </div>
 

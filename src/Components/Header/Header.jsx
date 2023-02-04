@@ -22,8 +22,8 @@ const nav_links = [
     path: "/contact",
   },
   {
-    display: "Signup",
-    path: "/signup",
+    display: "Signin",
+    path: "/signin",
   },
 ];
 

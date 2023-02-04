@@ -8,13 +8,19 @@
 
 }
 .contact-wrapper1{
-  border: 1px solid black;
   padding: 20px;
   margin: 10px;
   z-index: 100;
   border-radius: 5px;
+  box-shadow: -42px 26px 20px -19px rgba(0,0,0,0.1);
 }
-
+.input-text{
+  border: none;
+  background-color: #6468ce40;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+}
 .contact-input{
   padding: 10px;
 
@@ -32,6 +38,10 @@ input{
   width: 90%;
   padding: 10px;
   border-radius: 5px;
+  background-color: #212245;
+  color: #fff;
+  border: none;
+
 }
 .contact-eye {
   height: 20px;
@@ -45,7 +55,7 @@ input{
   color: white;
   padding: 8px 15px ;
   text-decoration: none;
-  background-color: red;
+  background-color: #212245;
   margin-left: 5px;
   border-radius: 10px;
   
@@ -60,7 +70,7 @@ input{
 .message {
   text-align: center;
   font-size: 1.5rem;
-  color: #ff0000;
+  color: #212245;
   transition: 0.5s;
   font-weight: bold;
   padding: 10px;
@@ -91,6 +101,20 @@ align-items: center;
       height: 320px;
     
       display: none;
+      
     }
-  
+    
+  }
+  @media only screen and (max-width: 451px) {
+
+    .link{
+      color: white;
+      text-decoration: none;
+      background-color: #212245;
+      margin-left: 5px;
+      border-radius: 10px;
+      font-size: 10px;
+      
+    }
+
   }

@@ -47,13 +47,13 @@ function Signup() {
     >
       <div className="contact-wrapper1">
         <div>
-          <h1 className="contact-header">Create an Account </h1>
+          <h2 className="contact-header">Create an Account </h2>
         </div>
 
         <form onSubmit={handleSubmit}>
         <div className="contact-input">
           <label>Name</label>
-          <input type="text" placeholder="Name"/>
+          <input type="text" placeholder="Name"  className="input-text" />
           </div>
           <div className="contact-input">
           <label>Email</label>
@@ -63,6 +63,7 @@ function Signup() {
               type="email"
               name="email"
               placeholder="Email"
+              className="input-text"
             />
           </div>
        
@@ -73,6 +74,7 @@ function Signup() {
                 onChange={(e) => setPassword(e.target.value)}
                 type={show ? "text" : "password"}
                 name="password" placeholder="Password"
+                className="input-text"
               />
               <img
                 onClick={handleShow}
@@ -103,7 +105,7 @@ function Signup() {
         </form>
       </div>
       <div className="contact-wrapper2" >
-        <img src="../Image/location.png" alt="hero-img" className="signup-image" />
+        <img src="../Image/tree.jpeg" alt="hero-img" className="signup-image" />
       </div>
     </motion.div>
   );

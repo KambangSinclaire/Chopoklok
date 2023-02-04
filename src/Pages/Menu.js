@@ -14,10 +14,9 @@ import { Link } from "react-router-dom";
 import Products from "../assets/Data/Products";
 import { motion } from "framer-motion";
 import "../Styles/menu.css";
-import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
-import Orders from "./Orders";
+
 import React, { useState, useEffect } from "react";
-import ProductCard from '../Components/UI/Product-card/ProductCard';
+import {ToastContainer,toast} from "react-toastify";
 import products from "../assets/Data/Products";
 
 
@@ -25,10 +24,26 @@ import products from "../assets/Data/Products";
 // import { Container, Row, Col} from "";
 
 function Menu() {
-  
+  const notify  = () => toast("Sorry, you must be logged in to view this page")
   const product2 = Products;
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
+
+  const [text, setText] = useState("")
+  const [fullText, setFullText] = useState(
+      "Just look through and place your..."
+    )
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      setTimeout(() => {
+        setText(text + fullText[index])
+        setIndex(index + 1)
+      }, 40)
+    }
+  }, [index])
+
 
   const [hotPizza, setHotPizza] = useState([]); 
   useEffect(() => {
@@ -44,11 +59,13 @@ function Menu() {
     exit={{ Y: 0, transition: { duration: 1.5 } }}
     >
       <div className="filter">
-          <h1>Just look through and place your...</h1>
+          <h1>{text}</h1>
           <section>
-            <button className="order__btn d-flex align-items-center justify-content-between color-#fff">
-                  <Link to="/Orders" >Order now</Link> <i className="ri-arrow-right-s-line"></i>
+          <div className="hero__btns d-flex align-items-center gap-5 mt-4">
+                  <button className="order__btn d-flex align-items-center justify-content-between color-white" onClick={notify} >
+                  <Link to="/orders">Order now</Link> <i className="ri-arrow-right-s-line"></i>
                   </button>
+                  </div>
           </section>
       </div>
       <div className="p-cards">

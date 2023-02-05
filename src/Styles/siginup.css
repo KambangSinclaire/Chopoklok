@@ -5,7 +5,6 @@
   padding: 10px;
 }
 
-
 form {
   display: flex;
   justify-content: center;
@@ -49,7 +48,7 @@ form {
   border-bottom: 2px solid #000;
 }
 
-.link {
+.link1 {
   background: none;
   padding: 10px 20px;
   font-size: 20px;
@@ -62,10 +61,10 @@ form {
   border-radius: 5px;
 }
 
-.link:hover {
+.link1:hover {
   transition: 0.5s;
   color: #fff;
-  background-color: red;
+  background-color: #ff1100;
 }
 
 .contact-social {

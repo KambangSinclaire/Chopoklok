@@ -20,9 +20,9 @@ import foodCategoryImg03 from "../assets/Images/bread.png";
 import { motion } from "framer-motion";
 /* import ProductCard from "../Components/UI/Product-card/ProductCard.js";
  */
-import whyImg from "../assets/Images/location.png";
+import whyImg from "../assets/Images/whyChop.svg";
 
-import networkImg from "../assets/Images/network.png";
+import newHero from "../assets/Images/chopoklok_Del.svg";
 
 /* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
@@ -87,105 +87,117 @@ const Home = () => {
   }, [Category]); */
   return (
     <motion.div
-    
-    initial={{ width: 0 }}
-    animate={{ width: "100%" }}
-    exit={{ Y: 0, transition: { duration: 1.5 } }}>
-
-<Helmet
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ Y: 0, transition: { duration: 1.5 } }}
     >
-      <section>
-        <Container>
-          <Row>
-            <Col lg="6" md="6">
-              <div className="hero__content  ">
-                <h5 className="mb-3">Easy way to make an order</h5>
-                <h1 className="mb-4 hero__title">
-                  <span>HUNGRY?</span> Sign up <br /> and have food deliverd
-                  <span></span>
-                </h1>
+      <Helmet>
+        <section>
+          <Container>
+            <Row>
+              <Col lg="6" md="6">
+                <div className="hero__content  ">
+                  <h5 className="mb-3">Easy way to make an order</h5>
+                  <h1 className="mb-4 hero__title">
+                    <span>HUNGRY?</span> Sign up <br /> and have food deliverd
+                    <span></span>
+                  </h1>
 
-                {/*  <p>
+                  {/*  <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
                   magni delectus tenetur autem, sint veritatis!
                 </p> */}
 
-                <div className="hero__btns d-flex align-items-center gap-5 mt-4">
-                  <button className="order__btn d-flex align-items-center justify-content-between">
-                    Order now <i className="ri-arrow-right-s-line"></i>
-                  </button>
+                  <div className="hero__btns d-flex align-items-center gap-5 mt-4 ">
+                    <button
+                      className="order__btn d-flex align-items-center justify-content-between"
+                      /*   style={{
+                        background: "#46446b !important",
+                        textDecoration: "none",
+                      }} */
+                    >
+                      Order now{" "}
+                      {/* <i className="ri-arrow-right-s-line"></i> */}
+                    </button>
 
-                  <button className="all__foods-btn">
-                    <Link to="/foods">See all foods</Link>
-                  </button>
-                </div>
+                    <button
+                      className="all__foods-btn"
+                      /*  style={{
+                        background: "#46446b !important",
+                        textDecoration: "none",
+                        color: "fff",
+                      }} */
+                    >
+                      See all foods
+                    </button>
+                  </div>
 
-                <div className=" hero__service  d-flex align-items-center gap-5 mt-5 ">
-                  <p className=" d-flex align-items-center gap-2 ">
-                    <span className="shipping__icon">
-                      <i className="ri-car-line"></i>
-                    </span>{" "}
-                    Cheap Transportation
-                  </p>
+                  <div className=" hero__service  d-flex align-items-center gap-5 mt-5 ">
+                    <p className=" d-flex align-items-center gap-2 ">
+                      <span className="shipping__icon">
+                        <i className="ri-car-line"></i>
+                      </span>{" "}
+                      Cheap Transportation
+                    </p>
 
-                  <p className=" d-flex align-items-center gap-2 ">
-                    <span className="shipping__icon">
-                      <i className="ri-shield-check-line"></i>
-                    </span>{" "}
-                    100% secure checkout
-                  </p>
-                </div>
-              </div>
-            </Col>
-
-            <Col lg="6" md="6">
-              <div className="hero__img">
-                <img src="../Image/hero.png" alt="hero-img" className="w-100" />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section className="pt-0">
-        <Category />
-      </section>
-      <section>
-        <Container>
-          <Row>
-            <Col lg="12" className="text-center">
-              <h5 className="feature__subtitle mb-4">What we serve</h5>
-              <h2 className="feature__title">Just sit back at home</h2>
-              <h2 className="feature__title">
-                we will <span>take care</span>
-              </h2>
-              <p className="mb-1 mt-4 feature__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-                officiis?
-              </p>
-              <p className="feature__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, eius.{" "}
-              </p>
-            </Col>
-
-            {featureData.map((item, index) => (
-              <Col lg="4" md="6" sm="6" key={index} className="mt-5">
-                <div className="feature__item text-center px-5 py-3">
-                  <img
-                    src={item.imgUrl}
-                    alt="feature-img"
-                    className="w-25 mb-3"
-                  />
-                  <h5 className=" fw-bold mb-3">{item.title}</h5>
-                  <p>{item.desc}</p>
+                    <p className=" d-flex align-items-center gap-2 ">
+                      <span className="shipping__icon">
+                        <i className="ri-shield-check-line"></i>
+                      </span>{" "}
+                      100% secure checkout
+                    </p>
+                  </div>
                 </div>
               </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
 
-      {/* <section>
+              <Col lg="6" md="6">
+                <div className="hero__img">
+                  <img src={newHero} alt="hero-img" className="w-100" />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <section className="pt-0">
+          <Category />
+        </section>
+        <section>
+          <Container>
+            <Row>
+              <Col lg="12" className="text-center">
+                <h5 className="feature__subtitle mb-4">What we serve</h5>
+                <h2 className="feature__title">Just sit back at home</h2>
+                <h2 className="feature__title">
+                  we will <span>take care</span>
+                </h2>
+                <p className="mb-1 mt-4 feature__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolor, officiis?
+                </p>
+                <p className="feature__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam, eius.{" "}
+                </p>
+              </Col>
+
+              {featureData.map((item, index) => (
+                <Col lg="4" md="6" sm="6" key={index} className="mt-5">
+                  <div className="feature__item text-center px-5 py-3">
+                    <img
+                      src={item.imgUrl}
+                      alt="feature-img"
+                      className="w-25 mb-3"
+                    />
+                    <h5 className=" fw-bold mb-3">{item.title}</h5>
+                    <p>{item.desc}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
+
+        {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -248,7 +260,7 @@ const Home = () => {
         </Container>
       </section> */}
 
-      {/* <section className="pt-0">
+        {/* <section className="pt-0">
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5 ">
@@ -264,67 +276,67 @@ const Home = () => {
         </Container>
       </section> */}
 
-      <section className="why__choose-us">
-        <Container>
-          <Row>
-            <Col lg="6" md="6">
-              <img src={whyImg} alt="why-tasty-treat" className="w-100" />
-            </Col>
+        <section className="why__choose-us">
+          <Container>
+            <Row>
+              <Col lg="6" md="6">
+                <img src={whyImg} alt="why-tasty-treat" className="w-100" />
+              </Col>
 
-            <Col lg="6" md="6">
-              <div className="why__tasty-treat">
-                <h2 className="tasty__treat-title mb-4">
-                  Why <span>ChopOklok?</span>
-                </h2>
-                <p className="tasty__treat-desc">
-                  This project’s idea has been buckled into the name chopoklok.
-                  Chopoklok is a word made out of two words i.e chop and
-                  o’clock. Chop is a pidgin English word that means eat and
-                  oklok is thought to be the simpler form of o’clock which means
-                  time.
-                </p>
+              <Col lg="6" md="6">
+                <div className="why__tasty-treat">
+                  <h2 className="tasty__treat-title mb-4">
+                    Why <span>ChopOklok?</span>
+                  </h2>
+                  <p className="tasty__treat-desc">
+                    This project’s idea has been buckled into the name
+                    chopoklok. Chopoklok is a word made out of two words i.e
+                    chop and o’clock. Chop is a pidgin English word that means
+                    eat and oklok is thought to be the simpler form of o’clock
+                    which means time.
+                  </p>
 
-                <ListGroup className="mt-4">
-                  <ListGroupItem className="border-0 ps-0">
-                    <p className=" choose__us-title d-flex align-items-center gap-2 ">
-                      <i className="ri-checkbox-circle-line"></i> Fresh and
-                      tasty foods
-                    </p>
-                    <p className="choose__us-desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quia, voluptatibus.
-                    </p>
-                  </ListGroupItem>
+                  <ListGroup className="mt-4">
+                    <ListGroupItem className="border-0 ps-0">
+                      <p className=" choose__us-title d-flex align-items-center gap-2 ">
+                        <i className="ri-checkbox-circle-line"></i> Fresh and
+                        tasty foods
+                      </p>
+                      <p className="choose__us-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Quia, voluptatibus.
+                      </p>
+                    </ListGroupItem>
 
-                  <ListGroupItem className="border-0 ps-0">
-                    <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i className="ri-checkbox-circle-line"></i> Quality
-                      support
-                    </p>
-                    <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
-                    </p>
-                  </ListGroupItem>
+                    <ListGroupItem className="border-0 ps-0">
+                      <p className="choose__us-title d-flex align-items-center gap-2 ">
+                        <i className="ri-checkbox-circle-line"></i> Quality
+                        support
+                      </p>
+                      <p className="choose__us-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Qui, earum.
+                      </p>
+                    </ListGroupItem>
 
-                  <ListGroupItem className="border-0 ps-0">
-                    <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i className="ri-checkbox-circle-line"></i>Order from any
-                      location{" "}
-                    </p>
-                    <p className="choose__us-desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui, earum.
-                    </p>
-                  </ListGroupItem>
-                </ListGroup>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+                    <ListGroupItem className="border-0 ps-0">
+                      <p className="choose__us-title d-flex align-items-center gap-2 ">
+                        <i className="ri-checkbox-circle-line"></i>Order from
+                        any location{" "}
+                      </p>
+                      <p className="choose__us-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Qui, earum.
+                      </p>
+                    </ListGroupItem>
+                  </ListGroup>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
 
-      {/*  <section>
+        {/*  <section>
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -349,9 +361,8 @@ const Home = () => {
           </Row>
         </Container>
       </section> */}
-    </Helmet>
+      </Helmet>
     </motion.div>
-    
   );
 };
 

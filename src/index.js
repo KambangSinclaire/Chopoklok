@@ -1,24 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
-import "remixicon/fonts/remixicon.css"
-import reportWebVitals from './reportWebVitals';
+import "remixicon/fonts/remixicon.css";
+import reportWebVitals from "./reportWebVitals";
+import {Store} from './Chopoklok_Store/Store';
+import {Provider} from 'react-redux'
 
-import {BrowserRouter as Router} from 'react-router-dom'
-import { AuthContextProvider } from './Components/Context/AuthContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter as Router } from "react-router-dom";
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AuthContextProvider>
-    <Router >
-    <App />
-    </Router>
-    </AuthContextProvider>
-   
-   
+    
+      <Router>
+        <Provider store={Store}>
+        <App />
+        </Provider>
+        
+      </Router>
+    
   </React.StrictMode>
 );
 

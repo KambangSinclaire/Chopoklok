@@ -99,7 +99,10 @@ const Home = () => {
               <div className="hero__content  ">
                 
                 <h1 className="mb-4 hero__title">
-                  <span>HUNGRY?</span> Sign up <br /> and have food delivered
+                  <span>HUNGRY?</span> Sign up <br /> 
+                  and have food 
+                  <br /> delivered at your
+                  <br /> door step
                   <span></span>
                 </h1>
 
@@ -144,9 +147,9 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      <section className="pt-0">
+      {/* <section className="pt-0">
         <Category />
-      </section>
+      </section> */}
       <section>
         <Container>
           <Row>

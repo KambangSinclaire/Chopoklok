@@ -134,8 +134,21 @@
 
 import React,{Fragment} from 'react'
 import '../Styles/contact.css'
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 const Contact = () => {
+    const notify = () => {
+        
+        toast.success("Success Notification !", {
+          position: toast.POSITION.TOP_CENTER
+        });
+        toast.error("Error Notification !", {
+            position: toast.POSITION.TOP_LEFT
+          });
+      };
   return (
     <Fragment>
     <section className='contact'>
@@ -194,7 +207,8 @@ const Contact = () => {
                         <input type='text' placeholder='Name'/>
                         <input type='email' placeholder='Email'/>
                         <textarea placeholder='Comment'></textarea>
-                        <button type='submit' className='site-btn'>Send Message</button>
+                        <button type='submit' onClick={notify} className='site-btn'>Send Message</button>
+                        
                     </form>
                 </div>
             </div>
@@ -218,6 +232,9 @@ const Contact = () => {
         </div>
      </div>
     </section>
+    <>
+          <ToastContainer />
+        </>
     </Fragment>
   ) 
 }

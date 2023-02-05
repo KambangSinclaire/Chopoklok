@@ -25,6 +25,9 @@ import { productInputs, userInputs } from "../formSource";
 import CartCheckout from "../Pages/Cart_checkout";
  import { AuthContext } from "../Components/Context/AuthContext";
 // import Menu from "../Pages/Menu";
+
+import Notifications from "react-notifications-menu";
+
   
 
 // const Routers = () => {
@@ -58,7 +61,8 @@ const Routers = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path='/Notification' element={<Notify/>} />
+      <Route path='/Notification' element={<Notify/>} /> 
+      {/* <Route path='/Notification' element={<Notifications notificationCard={CustomComponent} data={data} />} /> */}
       <Route
         path="/dashboard"
         element={

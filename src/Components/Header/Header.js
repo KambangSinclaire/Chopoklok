@@ -3,7 +3,9 @@ import { Container } from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/Images/res-logo.png";
 
+
 import "../../Styles/header.css";
+
 const nav_links = [
   {
     display: "Home",
@@ -66,7 +68,7 @@ const Header = () => {
 
             <span className="user">
               <Link to="/Notification">
-              <i class="ri-notification-4-line"></i>
+              <i class="ri-notification-4-line" ></i>
               </Link>
             </span>
 

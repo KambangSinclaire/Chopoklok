@@ -28,20 +28,25 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
+import foodCategoryImg04 from "../assets/Images/african_food.png";
+import foodCategoryImg05 from "../assets/Images/beverages.png";
+import foodCategoryImg06 from "../assets/Images/ice_cream.png";
+import foodCategoryImg07 from "../assets/Images/fastfood_logo.png";
 import ProductCard from '../Components/UI/Product-card/ProductCard';
 
 import category from "../Components/UI/Category/Category";
 
+
+
 function Orders() {
 
 
-  
+
   const [text, setText] = useState("")
   const [fullText] = useState(
-      "Filtering products by category."
-    )
+    "Filtering products by category."
+  )
   const [index, setIndex] = useState(0);
-
   useEffect(() => {
     if (index < fullText.length) {
       setTimeout(() => {
@@ -55,96 +60,162 @@ function Orders() {
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
-   // const product2 = products;
-    
-    const [hotPizza, setHotPizza] = useState([]); 
-    useEffect(() => {
-      const filteredPizza = products.filter((item) => item.category === "Pizza");
-      const slicePizza = filteredPizza.slice(0, 4);
-      setHotPizza(slicePizza);
-    }, []); 
+  // const product2 = products;
+
+  const [hotPizza, setHotPizza] = useState([]);
+  useEffect(() => {
+    const filteredPizza = products.filter((item) => item.category === "Pizza");
+    const slicePizza = filteredPizza.slice(0, 4);
+    setHotPizza(slicePizza);
+  }, []);
+
+  useEffect(() => {
+    if (category === "ALL") {
+      setAllProducts(products);
+    }
+
+    if (category === "BURGER") {
+      const catName = "BURGER";
+      const filteredProducts = products.filter(
+        (item) => item.category === "Burger"
+      );
+
+      setAllProducts(filteredProducts);
+    }
+
+    if (category === "PIZZA") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Pizza"
+      );
+
+      setAllProducts(filteredProducts);
+    }
+
+    if (category === "BREAD") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Bread"
+      );
+
+      setAllProducts(filteredProducts);
+    }
+
+    if (category === "AFRICA") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "African"
+      );
+
+      setAllProducts(filteredProducts);
+    }
+
+    if (category === "BEVERAGES") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Beverages"
+      );
+
+      setAllProducts(filteredProducts);
+    };
+
+    if (category === "ICE_CREAM") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "Ice_Cream"
+      );
+
+      setAllProducts(filteredProducts);
+    };
+
+    if (category === "FAST_FOOD") {
+      const filteredProducts = products.filter(
+        (item) => item.category === "FastFood"
+      );
+
+      setAllProducts(filteredProducts);
+    }
+
+  }, [category]);
+
   
-    useEffect(() => {
-      if (category === "ALL") {
-        setAllProducts(products);
-      } 
-  
-      if (category === "BURGER") {
-        const filteredProducts = products.filter(
-          (item) => item.category === "Burger"
-        );
-  
-        setAllProducts(filteredProducts);
-      }
-  
-      if (category === "PIZZA") {
-        const filteredProducts = products.filter(
-          (item) => item.category === "Pizza"
-        );
-  
-        setAllProducts(filteredProducts);
-      }
-  
-      if (category === "BREAD") {
-        const filteredProducts = products.filter(
-          (item) => item.category === "Bread"
-        );
-  
-        setAllProducts(filteredProducts);
-      }
-    }, [category]);
-    
-    
+
   return (
-  <>
-    <motion.div className="main"
-    
-    initial={{ width: 0 }}
-    animate={{ width: "100%" }}
-    exit={{ Y: 0, transition: {duration: 1.5} }}
-    >
-      <div className="filter">
+    <>
+
+{/* <div>
+  <StickyContainer>
+    <Sticky>{({ style }) => (
+      <header style={style}>
+        This is a sticky header </header>
+    )}
+    </Sticky> <ul>
+      {data.map((x) => {
+        return (<li key={x}>{x}</li>)
+      })} </ul>
+  </StickyContainer>
+</div> */}
+
+      <motion.div className="main"
+
+        initial={{ width: 0 }}
+        animate={{ width: "100%" }}
+        exit={{ Y: 0, transition: { duration: 1.5 } }}
+      >
+        
+        <div className="filter">
           <h2>{text}</h2>
           <section >
-           <Col lg="12">
-             <div className = "food__category d-block align-items-center justify-content-center mb-1">
-               <button className="category__btn all__button m-0" onClick={() => setCategory('ALL')}>All</button>
-               <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BURGER')}>
-                 <img src={foodCategoryImg01} alt=""/>
-                 Burger
-               </button>
-               <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('PIZZA')}>
-                 <img src={foodCategoryImg02} alt=""/>
-                 Pizza
-               </button>
-               <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BREAD')}>
-                 <img src={foodCategoryImg03} alt=""/>
-                 Bread
-               </button>
-             </div>
-           </Col>
+            <Col lg="12">
+              <div className="food__category d-block align-items-center justify-content-center mb-1">
+                <button className="category__btn all__button m-0" onClick={() => setCategory('ALL')}>All</button>
+                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BURGER')}>
+                  <img src={foodCategoryImg01} alt="" />
+                  Burger
+                </button>
+                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('PIZZA')}>
+                  <img src={foodCategoryImg02} alt="" />
+                  Pizza
+                </button>
+                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BREAD')}>
+                  <img src={foodCategoryImg03} alt="" />
+                  Bread
+                </button>
+                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('AFRICA')}>
+                  <img src={foodCategoryImg04} alt="" />
+                  Local Cuisine
+                </button>
+                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BEVERAGES')}>
+                  <img src={foodCategoryImg05} alt="" />
+                  Beverages
+                </button>
+                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('ICE_CREAM')}>
+                  <img src={foodCategoryImg06} alt="" />
+                  Ice Cream
+                </button>
+                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('FAST_FOOD')}>
+                  <img src={foodCategoryImg07} alt="" />
+                  Fastfood
+                </button>
+              </div>
+            </Col>
           </section>
-      </div>
-      <div className="p-cards">
-      <MDBContainer>
-    <h4 className="mt-5 mb-0 align-items-center">
-      <strong className="align-items-center">Order List</strong>
-    </h4>
+        </div>
+        <div className="p-cards">
+          <MDBContainer>
+            <h4 className="mt-5 mb-0 align-items-center">
+              <strong className="align-items-center">Order List</strong>
+            </h4>
 
-    <MDBRow>
-          
-           {
-             allProducts.map(item => (
-              <Col lg='3' md='4' key={item.id} className="mt-5">
+            <MDBRow>
 
-              <ProductCard item={item}/>
-   
-              </Col>
-             ))
-           }
+              {
+                allProducts.map(item => (
+                  <Col lg='3' md='4' key={item.id} className="mt-5">
+
+                    <ProductCard item={item} />
+
+                  </Col>
+                ))
+              }
 
 
-      {/* <MDBCol md="6" lg="4" className="mb-4">
+              {/* <MDBCol md="6" lg="4" className="mb-4">
         <MDBCard>
           <MDBRipple
             rippleColor="light"
@@ -186,7 +257,7 @@ function Orders() {
 
 
 
-      {/* <MDBCol md="6" lg="4" className="mb-4">
+              {/* <MDBCol md="6" lg="4" className="mb-4">
         <MDBCard>
           <MDBRipple
             rippleColor="light"
@@ -235,10 +306,10 @@ function Orders() {
 
 
 
-    </MDBRow>
-  </MDBContainer>
-      </div>
-      {/* <section>
+            </MDBRow>
+          </MDBContainer>
+        </div>
+        {/* <section>
       <div className="container d-flex d-inline-flex">
         <div className='divP 1'>
           <img className='pic 1' src='./logo192.png' alt='not found' />
@@ -268,15 +339,15 @@ function Orders() {
         <option>Visa</option>
       </select>
       </section> */}
-    </motion.div>
-  
-</>
-);
+      </motion.div>
+
+    </>
+  );
 }
 export default Orders;
-{/* export default Menu; */}
+{/* export default Menu; */ }
 
- {/* <motion.div
+{/* <motion.div
         className="main"
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
@@ -553,8 +624,8 @@ export default Orders;
 
 
 
-      
-      {/* <Section>
+
+{/* <Section>
       <div className="container d-flex d-inline-flex">
         <div className='divP 1'>
           <img className='pic 1' src='./logo192.png' alt='not found' />
@@ -588,4 +659,4 @@ export default Orders;
 
 
 
-{/* export default Orders; */}
+{/* export default Orders; */ }

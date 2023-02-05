@@ -33,7 +33,7 @@
     margin-top: 30px;
     padding: 20px 0px;
     border-radius: 8px;
-    position: sticky;
+    max-width: 90px;
   }
   
   .food__category button {

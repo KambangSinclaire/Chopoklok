@@ -18,7 +18,6 @@ const categoryData = [
     display: "Ice Cream",
     imgUrl: categoryImg02,
   },
-
   {
     display: "Local Cuisine",
     imgUrl: categoryImg03,

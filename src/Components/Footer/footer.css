@@ -1,13 +1,16 @@
 .footer {
-  padding: 50px 0px;
-  background: #fde4e4;
+  padding: 10px 0px;
+  background: #0210209f;
 }
 
 .footer_logo {
   width: calc(100% - 80%);
   margin-bottom: 5px;
 }
-
+.Row {
+  display: flex;
+  justify-content: space-between;
+}
 .footer_logo h5 {
   font-weight: 600;
   font-size: 1rem;
@@ -90,23 +93,27 @@
     font-size: 0.7rem;
   }
   .newsletter span {
-    padding: 4px 20px;
-    font-size: 0.7rem;
+    background: #0210209f;
+    padding: 5px 30px;
+    border-radius: 5px;
   }
-}
-
-@media only screen and (max-width: 768px) {
-  .footer__title {
-    font-size: 0.8rem;
+  .newsletter-input {
+    background: #456f9e36;
+  }
+  .newsletter span i {
+    color: #fff;
   }
 
   .delivery__time-item span {
     font-size: 0.8rem;
   }
 
-  .delivery__time-item p {
-    font-size: 0.7rem;
-    margin-bottom: 0;
+  .social__links span i {
+    padding: 5px;
+    background: #df2020;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
   }
 }
 

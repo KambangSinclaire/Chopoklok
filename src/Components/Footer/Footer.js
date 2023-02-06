@@ -6,12 +6,12 @@ import '../Footer/footer.css'
 const Footer = () => {
   return <footer className='footer'>
  <Container>
-  <Row>
+  <Row className='Row'>
     <Col lg='3' md='4' sm='6'>
     <div className="footer_logo text-start">
             <img src={logo} alt="logo"></img>
             <h5>ChopOklok</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas autem doloremque.</p>
+            <p></p>
           </div>
     </Col>
 
@@ -31,30 +31,20 @@ const Footer = () => {
 
     </Col>
 
-    <Col lg='3' md='4' sm='6'>
-      <h5 className='footer_title'>Contact</h5>
-      <ListGroup className='deliver_time-list'>
-        <ListGroupItem className='delivery_time-item border-0 ps-0'>
-          <p>Location: Bonaberi,Douala, Cameroon</p>
-        </ListGroupItem>
-        <ListGroupItem className='delivery_time-item border-0 ps-0'>
-          <span>Email: example@gmail.com</span>
-        </ListGroupItem>
-      </ListGroup>
-    </Col>
+   
 
     <Col lg='3' md='4' sm='6' className='footer_title'>
       <h5>Newsletter</h5>
       <p>Subscribe to our newsletter</p>
       <div className="newsletter">
-        <input type="email" placeholder='Enter your email' />
+        <input type="email" placeholder='Enter your email' className='newsletter-input' />
         <span>
           <i className="ri-send-plane-line"></i>
         </span>
       </div>
     </Col>
   </Row >
-  <Row className='mt-5'>
+  <Row className='mt-2'>
   <Col lg='6' md='6'>
     <p className='copyright_text'>
       Copyright -2023, website made with love by Level-3 @ SevenAC. All Rights Reserved.
@@ -63,7 +53,7 @@ const Footer = () => {
   </Col>
   <Col lg='6' md='6'>
     <div className='social_links d-flex align-items-center gap-4 justify-content-end'>
-      <p className='m-0'>Follow:</p>
+      <p className='m-0'>Follow us:</p>
       <span>
         {""}
       <Link to="">

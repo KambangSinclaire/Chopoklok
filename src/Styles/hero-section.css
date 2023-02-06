@@ -8,7 +8,7 @@
 }
 
 .hero__title span {
-  color: #0210209f;
+  color: #df2020;
 }
 
 .hero__content p {
@@ -27,30 +27,40 @@
 }
 
 .order__btn {
-  background: #46446b;
+  background: #df2020;
+  text-decoration: none;
   color: #fff;
   transition: 0.3s;
 }
 
+.order__btn a {
+  text-decoration: none;
+  color: #fff;
+  justify-items: center;
+}
+
 .order__btn:hover {
   background: #212245;
+  text-decoration: none;
+  color: #fff;
+}
+
+.order__btn a:hover {
+  text-decoration: none;
+  color: #ff0;
 }
 
 .all__foods-btn {
-  background: #46446b;
-  color: #fff;
-  /* border: 1px solid #df2020 !important; */
+  background: transparent;
+  text-decoration: none;
+  border: 1px solid #df2020 !important;
 }
 
 .all__foods-btn a {
+  color: #df2020;
   text-decoration: none;
 }
-
-.all__foods-btn:hover {
-  background: #212245;
-}
-
-.hero__service p {
+zz .hero__service p {
   color: #212245;
   font-weight: 600;
   font-size: 0.9rem;
@@ -58,7 +68,7 @@
 
 .shipping__icon i {
   padding: 5px;
-  background: #46446b;
+  background: #df2020;
   color: #fff;
   border-radius: 50%;
   font-weight: 500 !important;

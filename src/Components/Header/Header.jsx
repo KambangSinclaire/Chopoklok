@@ -21,7 +21,7 @@ const nav_links = [
   },
   {
     display: "Cart",
-    path: "/cart",
+    path: "/cart-checkout",
     icon: <MDBIcon fas icon="shopping-cart" size="sm" />,
     className: "nav_links",
   },
@@ -32,10 +32,8 @@ const nav_links = [
     className: "nav_links",
   },
   {
-    display: "Signup",
-    path: "/signup",
-    icon: <MDBIcon fas icon="user-plus" size="sm" />,
-    className: "nav_links",
+    display: "Signin",
+    path: "/signin",
   },
 ];
 

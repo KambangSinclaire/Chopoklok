@@ -1,4 +1,3 @@
-import React from "react";
 import {
   MDBContainer,
   MDBRow,
@@ -10,6 +9,7 @@ import {
   MDBBtn,
   MDBRipple,
 } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
 import Products from "../assets/Data/Products";
 import { motion } from "framer-motion";
 import "../Styles/menu.css";
@@ -53,14 +53,39 @@ const addToCart = async (id) => {
   }
 }; */
 
-function Menu() {
-  //const { addToCart } = useSelector((store) => store.cart);
-  const dispatch = useDispatch();
-  const handeleCart = () => {
-    console.log("sheesh!!");
-  };
-  const product2 = Products;
+import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import products from "../assets/Data/Products";
 
+// import { Container, Row, Col} from "";
+
+function Menu() {
+  const notify = () => toast("Sorry, you must be logged in to view this page");
+  const product2 = Products;
+  const [category, setCategory] = useState("ALL");
+  const [allProducts, setAllProducts] = useState(products);
+
+  const [text, setText] = useState("");
+  const [fullText, setFullText] = useState(
+    "Just look through and place your..."
+  );
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < fullText.length) {
+      setTimeout(() => {
+        setText(text + fullText[index]);
+        setIndex(index + 1);
+      }, 40);
+    }
+  }, [index]);
+
+  const [hotPizza, setHotPizza] = useState([]);
+  useEffect(() => {
+    const filteredPizza = products.filter((item) => item.category === "Pizza");
+    const slicePizza = filteredPizza.slice(0, 4);
+    setHotPizza(slicePizza);
+  }, []);
   return (
     <>
       <motion.div
@@ -70,7 +95,18 @@ function Menu() {
         exit={{ Y: 0, transition: { duration: 1.5 } }}
       >
         <div className="filter">
-          <h1>Filtering Products</h1>
+          <h1>{text}</h1>
+          <section>
+            <div className="hero__btns d-flex align-items-center gap-5 mt-4">
+              <button
+                className="order__btn d-flex align-items-center justify-content-between color-white"
+                onClick={notify}
+              >
+                <Link to="/orders">Order now</Link>{" "}
+                <i className="ri-arrow-right-s-line"></i>
+              </button>
+            </div>
+          </section>
         </div>
         <div className="p-cards">
           <MDBContainer>
@@ -111,16 +147,6 @@ function Menu() {
                       <a href="#!" className="text-reset">
                         <p>{prods.category}</p>
                       </a>
-                      <h6 className="mb-3">{prods.price}</h6>
-                      <MDBBtn
-                        rounded
-                        className="mx-3"
-                        color="danger"
-                        onClick={() => dispatch(addToCart)}
-                      >
-                        Add To Cart
-                      </MDBBtn>
-                      <MDBBtn>View Cart</MDBBtn>
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
@@ -218,7 +244,8 @@ function Menu() {
 
 export default Menu;
 
-/* 
+{
+  /* 
     <motion.div
         className="main"
         initial={{ width: 0 }}
@@ -495,3 +522,4 @@ export default Menu;
       </motion.div>
 
 */
+}

@@ -5,24 +5,20 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "remixicon/fonts/remixicon.css";
 import reportWebVitals from "./reportWebVitals";
-import {Store} from './Chopoklok_Store/Store';
-import {Provider} from 'react-redux'
-
+import { Store } from "./Chopoklok_Store/Store";
+import { Provider } from "react-redux";
 
 import { BrowserRouter as Router } from "react-router-dom";
-
+import { AuthContextProvider } from "./Components/Context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    
-      <Router>
-        <Provider store={Store}>
+    <Router>
+      <Provider store={Store}>
         <App />
-        </Provider>
-        
-      </Router>
-    
+      </Provider>
+    </Router>
   </React.StrictMode>
 );
 

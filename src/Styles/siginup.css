@@ -3,33 +3,61 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  height: 600px;
+  margin: 55px 0px;
 }
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+.contact-wrapper1 {
+  padding: 20px;
+  margin: 10px;
+  z-index: 100;
+  border-radius: 5px;
+  box-shadow: -42px 26px 20px -19px rgba(0, 0, 0, 0.1);
 }
-
-.contact-text {
-  border-radius: 10px;
+.input-text {
+  border: none;
+  background-color: #6468ce40;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
 }
-
 .contact-input {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  padding: 10px;
+}
+
+input {
+  width: 90%;
+}
+.middle,
+.contact-input,
+.contact-text,
+.message {
+  padding: 5px;
+  margin: 5px;
+}
+.btn1 {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #212245;
+  color: #fff;
+  border: none;
 }
 .contact-eye {
   height: 20px;
+  padding-left: 5px;
 }
 .contact-icon {
   height: 40px;
   padding: 10px;
 }
-
+.link {
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  background-color: #212245;
+  margin-left: 5px;
+  border-radius: 10px;
+}
 /* .wrapper-btn{
     display: flex;
     justify-content: center;
@@ -40,34 +68,44 @@ form {
 .message {
   text-align: center;
   font-size: 1.5rem;
-  color: rgb(255, 0, 0);
+  color: #212245;
   transition: 0.5s;
   font-weight: bold;
-  margin: 5px;
   padding: 10px;
+  width: 90%;
+  height: 50px;
   border-bottom: 2px solid #000;
-}
-
-.link1 {
-  background: none;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-family: sans-serif;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 10px;
-  color: #000;
-  transition: 0.5s;
-  border-radius: 5px;
-}
-
-.link1:hover {
-  transition: 0.5s;
-  color: #fff;
-  background-color: #ff1100;
+  margin-bottom: 10px;
 }
 
 .contact-social {
-  position: relative;
-  top: 30%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-image {
+  height: 520px;
+}
+@media only screen and (max-width: 951px) {
+  .signup-image {
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 751px) {
+  .signup-image {
+    height: 320px;
+
+    display: none;
+  }
+}
+@media only screen and (max-width: 451px) {
+  .link {
+    color: white;
+    text-decoration: none;
+    background-color: #212245;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
 }

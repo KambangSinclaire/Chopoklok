@@ -9,30 +9,23 @@
 .feature__title span {
   color: #0210209f;
 }
-
 .feature__text {
-  color: #777;
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }
 
-.feature__item p {
-  color: #777;
-}
-
-/* .food__category {
-  background: #df2020;
+.food__category {
+  background: #0210209f;
   text-align: center;
   margin-top: 30px;
   padding: 20px 0px;
   border-radius: 8px;
-} */
-/* .mainBtn {
-  background: #46446b !important;
-} */
-
+  position: sticky;
+}
 .food__category button {
   border: none;
   outline: none;
-  padding: 7px 20px;
+  padding: 20px 20px;
   background: transparent;
   color: #fff;
 }
@@ -45,20 +38,17 @@
 .foodBtnActive {
   background: #fff !important;
   border-radius: 5px;
-  color: #46446b !important;
+  color: #0210209f !important;
 }
-.madLink {
-  text-decoration: none;
-}
+
 .tasty__treat-title span {
   color: #0210209f;
 }
 
 .tasty__treat-desc {
-  color: #777;
-  line-height: 28px;
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }
-
 .choose__us-title {
   font-weight: 600;
   margin-bottom: 10px;
@@ -66,21 +56,20 @@
 
 .choose__us-title i {
   font-weight: 500 !important;
-  /* color: #df2020; */
+  color: #0210209f;
 }
 
 .choose__us-desc {
-  color: #777;
+  font-size: 0.7rem;
 }
 
 .testimonial__subtitle {
-  color: #df2020;
+  color: #0210209f;
 }
 
 .testimonial__title span {
-  color: #df2020;
+  color: #0210209f;
 }
-
 .testimonial__desc {
   color: #777;
   line-height: 30px;

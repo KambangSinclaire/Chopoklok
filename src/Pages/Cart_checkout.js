@@ -1,6 +1,6 @@
 import React from "react";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@Style/font-awesome/css/font-awesome.min.css";
 import "../Styles/cart_checkout.css";
 import { useSelector, useDispatch } from "react-redux";
 import {

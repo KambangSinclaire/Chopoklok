@@ -8,13 +8,13 @@ import { UserAuth } from "../context/Authcontext"; */
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { SignIn } = UserAuth();
+  const { logIn } = UserAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      await SignIn(email, password);
+      await logIn(email, password);
       navigate("/account");
     } catch (e) {
       setError(e.message);
@@ -31,16 +31,17 @@ import { UserAuth } from "../context/Authcontext"; */
     >
       <div className="contact-wrapper1">
         <div>
-          <h1 className="contact-header">Sign into your account</h1>
+          <h2 className="contact-header">Sign Into Account</h2>
        
         </div>
         <form onSubmit={handleSubmit}>
           <div className="contact-input">
-            <label>Email ........</label>
+            <label>Email</label>
             <input
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               name="email"
+              className="input-text"
             />
           </div>
           <div className="contact-input">
@@ -49,6 +50,7 @@ import { UserAuth } from "../context/Authcontext"; */
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               name="email"
+              className="input-text"
             />
           </div>
           <div className="btnres">
@@ -56,19 +58,25 @@ import { UserAuth } from "../context/Authcontext"; */
               <button className="btn1">Sign In</button>
             </div>
           </div>
+          <p className="message"></p>
           <p className="contact-text">
-            Dont have an account?
-            <Link className="link1" to="/signup">
+            Dont have an account? 
+            <Link className="link" to="/signup">
               {" "}
               Signup
             </Link>
           </p>
         </form>
+        <div className="contact-social">
+            <img className="contact-icon" src="../Image/facebook.png" alt="" />
+            <img className="contact-icon" src="../Image/instagram.png" alt="" />
+            <img className="contact-icon" src="../Image/whatsapp.png" alt="" />
+          </div>
       </div>
       <div>
         <img
-          className="contact-wrapper2"
-          src="./image/pngwing.com.png"
+          className="signup-image"
+          src="./image/drone.jpeg"
           alt=""
         />
       </div>

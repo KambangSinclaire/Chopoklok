@@ -5,43 +5,42 @@
   padding: 10px;
   height: 600px;
   margin: 55px 0px;
-
 }
-.contact-wrapper1{
+.contact-wrapper1 {
   padding: 20px;
   margin: 10px;
   z-index: 100;
   border-radius: 5px;
-  box-shadow: -42px 26px 20px -19px rgba(0,0,0,0.1);
+  box-shadow: -42px 26px 20px -19px rgba(0, 0, 0, 0.1);
 }
-.input-text{
+.input-text {
   border: none;
   background-color: #6468ce40;
   padding: 10px;
   outline: none;
   cursor: pointer;
 }
-.contact-input{
+.contact-input {
   padding: 10px;
-
 }
 
-input{
+input {
   width: 90%;
 }
-.middle,.contact-input,.contact-text,.message{
+.middle,
+.contact-input,
+.contact-text,
+.message {
   padding: 5px;
   margin: 5px;
-
 }
-.btn1{
+.btn1 {
   width: 90%;
   padding: 10px;
   border-radius: 5px;
   background-color: #212245;
   color: #fff;
   border: none;
-
 }
 .contact-eye {
   height: 20px;
@@ -51,14 +50,13 @@ input{
   height: 40px;
   padding: 10px;
 }
-.link{
+.link {
   color: white;
-  padding: 8px 15px ;
+  padding: 8px 15px;
   text-decoration: none;
   background-color: #212245;
   margin-left: 5px;
   border-radius: 10px;
-  
 }
 /* .wrapper-btn{
     display: flex;
@@ -81,40 +79,33 @@ input{
 }
 
 .contact-social {
-height: 60px;
-display: flex;
-justify-content: center;
-align-items: center;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.signup-image{
+.signup-image {
   height: 520px;
- 
 }
-  @media only screen and (max-width: 951px) {
-    .signup-image{
-      height: 320px;
-     
-    }
+@media only screen and (max-width: 951px) {
+  .signup-image {
+    height: 320px;
   }
-  @media only screen and (max-width: 751px) {
-    .signup-image{
-      height: 320px;
-    
-      display: none;
-      
-    }
-    
-  }
-  @media only screen and (max-width: 451px) {
+}
+@media only screen and (max-width: 751px) {
+  .signup-image {
+    height: 320px;
 
-    .link{
-      color: white;
-      text-decoration: none;
-      background-color: #212245;
-      margin-left: 5px;
-      border-radius: 10px;
-      font-size: 10px;
-      
-    }
-
+    display: none;
   }
+}
+@media only screen and (max-width: 451px) {
+  .link {
+    color: white;
+    text-decoration: none;
+    background-color: #212245;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+}

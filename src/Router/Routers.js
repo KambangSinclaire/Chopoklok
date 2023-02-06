@@ -29,73 +29,85 @@ import CartCheckout from "../Pages/Cart_checkout";
 import { AuthContext } from "../Components/Context/AuthContext";
 import { AnimatePresence } from "framer-motion/dist/cjs";
 import Menu from "../Pages/Menu";
-// import Menu from "../Pages/Menu";
+import { AuthContextProvider } from "../context/Authcontext";
+import ProtectedRoute from "../Pages/protectedRoute";
+import { AnimatePresence } from "framer-motion";
+/* import Users from "../Pages/Users"; */
+import Account from "../Pages/Account";
+import Checkout from "../modules/Sales/Checkout";
+import Orders from "../Pages/Orders";
 
 const Routers = () => {
-
-  const {currentUser} = useContext(AuthContext)
-  const RequireAuth = ({ childern }) => {
-    return currentUser ? childern : <Navigate to="/login" />;
-  };
-  console.log(currentUser)
+  // const { currentUser } = useContext(AuthContext);
+  // const RequireAuth = ({ childern }) => {
+  //   console.log(currentUser);
+  //   return currentUser ? childern : <Navigate to="/login" />;
+  // };
+  const location = useLocation();
   return (
-      <AnimatePresence>
-         <AuthContextProvider>
-    <Routes>
-      <Route path="/" element={<Navigate to="/home" />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/menu" element={<Menu />} />
-      <Route path="/foods/:id" element={<FoodDetails />} />
-      <Route path="/cart-checkout" element={<CartCheckout />} />
-      {/* <Route path='/checkout' element={<Checkout/>} /> */}
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route
-        path="/dashboard"
-        element={
-          <RequireAuth>
+    <AnimatePresence>
+      <AuthContextProvider>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/foods/:id" element={<FoodDetails />} />
+          <Route path="/cart-checkout" element={<CartCheckout />} />
+          {/* <Route path='/checkout' element={<Checkout/>} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/signin" element={<Signin />} />
+          {/* <Route path="/users" element={<Users />}> */}
+          <Route
+            path="/account"
+            element={
+              <ProtectedRoute>
+                <Account />
+              </ProtectedRoute>
+            }
+          >
+            {/*  <Route index element={<List />} />
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add New User" />}
+            /> */}
+          </Route>
 
-            <Dashboard />
-          </RequireAuth>
-        }
-      />
-      <Route path="/users">
-        <Route
-          index
-          element={
+          <Route path="/account" element={<Account />} />
 
-            <List />
-          }
-        />
-        <Route
-          path=":userId"
-          element={
+          {/* <Route path="/users">
+            <Route index element={<List />} />
+            <Route path=":userId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={userInputs} title="Add New User" />}
+            />
+          </Route> */}
 
-            <Single />
-          }
-        />
-        <Route
-          path="new"
-          element={
-
-            <New inputs={userInputs} title="Add New User" />
-
-          }
-        />
-      </Route>
-
-      <Route path="/products">
-        <Route index element={<List />} />
-        <Route path=":productId" element={<Single />} />
-        <Route
-          path="new"
-          element={<New inputs={productInputs} title="Add New Product" />}
-        />
-      </Route>
-    </Routes>
-      </AuthContextProvider >
-    </AnimatePresence >
+          <Route
+            path="/products"
+            element={<New inputs={productInputs} title="Add New Product" />}
+          ></Route>
+          <Route path="/orders">
+            <Route index element={<List />} />
+            <Route path=":orderId" element={<Single />} />
+          </Route>
+        </Routes>
+      </AuthContextProvider>
+    </AnimatePresence>
   );
 };
 

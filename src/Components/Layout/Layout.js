@@ -1,19 +1,18 @@
-import React from 'react'
-import Header  from '../Header/Header.jsx';
-import Footer from '../Footer/Footer.js';
-import Routes from '../../Router/Routers'
-const Layout = () => {
-  
+import React from "react";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.js";
+import Routes from "../../Router/Routers";
 
+const Layout = () => {
   return (
     <div>
-         <Header/>
-        <div>
-            <Routes/>
-        </div>
-        {/*  <Footer />  */}
+      <Header />
+      <div>
+        <Routes />
+      </div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default Layout;

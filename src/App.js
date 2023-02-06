@@ -1,17 +1,16 @@
 import Layout from "./Components/Layout/Layout";
-import Contact from "./Pages/Contact";
-
+import { useDispatch, useSelector } from "react-redux";
+import { calculateTotalInCart } from "./Features/Cart/CartSlice";
+import { useEffect } from "react";
 
 function App() {
-  return (
-  (
-    <>
-    <Layout  />
-    {/* <Contact /> */}
-    </>
-  )
-  )
+  const { cartItems } = useSelector((store) => store.cart);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(calculateTotalInCart());
+  }, [cartItems]);
+  return <Layout />;
 }
 
 export default App;

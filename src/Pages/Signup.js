@@ -92,7 +92,7 @@ function Signup() {
           <p className="message">{message} </p>
           <p className="contact-text">
             Already have an account?
-            <Link to="/signin" className="link">
+            <Link to="/signin" className="link1">
               {" "}
               Signin
             </Link>

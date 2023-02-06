@@ -102,7 +102,7 @@ function Menu() {
                 className="order__btn d-flex align-items-center justify-content-between color-white"
                 onClick={notify}
               >
-                <Link to="/cart-checkout">Order now</Link>{" "}
+                <Link to="/Orders">Order now</Link>{" "}
                 <i className="ri-arrow-right-s-line"></i>
               </button>
             </div>

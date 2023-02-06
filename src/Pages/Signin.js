@@ -1,9 +1,10 @@
-/* ";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { UserAuth } from "../context/Authcontext"; */
+import { UserAuth } from "../context/Authcontext";
+import { motion } from "framer-motion";
+import "../Styles/siginup.css";
 
-/* function Signin() {
+function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -32,7 +33,6 @@ import { UserAuth } from "../context/Authcontext"; */
       <div className="contact-wrapper1">
         <div>
           <h2 className="contact-header">Sign Into Account</h2>
-       
         </div>
         <form onSubmit={handleSubmit}>
           <div className="contact-input">
@@ -60,7 +60,7 @@ import { UserAuth } from "../context/Authcontext"; */
           </div>
           <p className="message"></p>
           <p className="contact-text">
-            Dont have an account? 
+            Dont have an account?
             <Link className="link" to="/signup">
               {" "}
               Signup
@@ -68,25 +68,21 @@ import { UserAuth } from "../context/Authcontext"; */
           </p>
         </form>
         <div className="contact-social">
-            <img className="contact-icon" src="../Image/facebook.png" alt="" />
-            <img className="contact-icon" src="../Image/instagram.png" alt="" />
-            <img className="contact-icon" src="../Image/whatsapp.png" alt="" />
-          </div>
+          <img className="contact-icon" src="../Image/facebook.png" alt="" />
+          <img className="contact-icon" src="../Image/instagram.png" alt="" />
+          <img className="contact-icon" src="../Image/whatsapp.png" alt="" />
+        </div>
       </div>
       <div>
-        <img
-          className="signup-image"
-          src="./image/drone.jpeg"
-          alt=""
-        />
+        <img className="signup-image" src="../Image/drone.jpeg" alt="" />
       </div>
     </motion.div>
   );
 }
- 
-export default Signin;
-*/
 
+export default Signin;
+
+/* 
 import React from "react";
 import {
   MDBBtn,
@@ -222,3 +218,4 @@ const Signin = () => {
 };
 
 export default Signin;
+ */

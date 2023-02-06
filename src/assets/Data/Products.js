@@ -61,7 +61,7 @@ const Products = [
   {
     id: 2,
     title: "Vegetarian Pizza",
-    price: 1000,
+    price: 115.0,
     image01: product_02_image_01,
     image02: product_02_image_02,
     image03: product_02_image_03,
@@ -74,7 +74,7 @@ const Products = [
   {
     id: 3,
     title: "Double Cheese Margherita",
-    price: 1000,
+    price: 110.0,
     image01: product_03_image_01,
     image02: product_03_image_02,
     image03: product_03_image_03,
@@ -87,7 +87,7 @@ const Products = [
   {
     id: 4,
     title: "Maxican Green Wave",
-    price: 1000,
+    price: 110.0,
     image01: product_04_image_01,
     image02: product_04_image_02,
     image03: product_04_image_03,
@@ -100,7 +100,7 @@ const Products = [
   {
     id: 5,
     title: "Cheese Burger",
-    price: 1000,
+    price: 24.0,
     image01: product_05_image_01,
     image02: product_05_image_02,
     image03: product_05_image_03,
@@ -112,7 +112,7 @@ const Products = [
   {
     id: 6,
     title: "Royal Cheese Burger",
-    price: 1000,
+    price: 24.0,
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
@@ -125,7 +125,7 @@ const Products = [
   {
     id: 7,
     title: "Seafood Pizza",
-    price: 1000,
+    price: 115.0,
     image01: product_02_image_02,
     image02: product_02_image_01,
     image03: product_02_image_03,
@@ -138,7 +138,7 @@ const Products = [
   {
     id: 8,
     title: "Thin Cheese Pizza",
-    price: 1000,
+    price: 110.0,
     image01: product_03_image_02,
     image02: product_03_image_01,
     image03: product_03_image_03,
@@ -151,7 +151,7 @@ const Products = [
   {
     id: 9,
     title: "Pizza With Mushroom",
-    price: 1000,
+    price: 110.0,
     image01: product_04_image_02,
     image02: product_04_image_01,
     image03: product_04_image_03,
@@ -164,7 +164,7 @@ const Products = [
   {
     id: 10,
     title: "Classic Hamburger",
-    price: 1000,
+    price: 24.0,
     image01: product_05_image_02,
     image02: product_05_image_01,
     image03: product_05_image_03,
@@ -177,7 +177,7 @@ const Products = [
   {
     id: 11,
     title: "Crunchy Bread ",
-    price: 1000,
+    price: 35.0,
     image01: product_06_image_01,
     image02: product_06_image_02,
     image03: product_06_image_03,
@@ -190,7 +190,7 @@ const Products = [
   {
     id: 12,
     title: "Delicious Bread ",
-    price: 1000,
+    price: 35.0,
     image01: product_06_image_02,
     image02: product_06_image_01,
     image03: product_06_image_03,
@@ -203,7 +203,7 @@ const Products = [
   {
     id: 13,
     title: "Loaf Bread ",
-    price: 1000,
+    price: 35.0,
     image01: product_06_image_03,
     image02: product_06_image_02,
     image03: product_06_image_03,

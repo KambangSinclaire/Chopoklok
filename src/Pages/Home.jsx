@@ -175,7 +175,7 @@ const Home = () => {
           </Container>
         </section>
         <section className="pt-0">
-          <Category />
+         {/*  <Category /> */}
         </section>
         <section>
           <Container>

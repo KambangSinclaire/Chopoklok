@@ -1,4 +1,4 @@
-import '../Styles/orders.css';
+import "../Styles/orders.css";
 import {
   MDBContainer,
   MDBRow,
@@ -17,14 +17,13 @@ import { Link, useNavigate } from "react-router-dom";
 import products from "../assets/Data/Products";
 import React, { useState, useEffect } from "react";
 import Filters from "./Filters";
-import Animate from './textAnimator';
+import Animate from "./textAnimator";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 import featureImg01 from "../assets/Images/service-01.webp";
 import featureImg02 from "../assets/Images/service-02.webp";
 import featureImg03 from "../assets/Images/service-03.webp";
 
-import { StickyContainer, Sticky } from 'react-sticky';
 import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";
@@ -32,30 +31,22 @@ import foodCategoryImg04 from "../assets/Images/african_food.png";
 import foodCategoryImg05 from "../assets/Images/beverages.png";
 import foodCategoryImg06 from "../assets/Images/ice_cream.png";
 import foodCategoryImg07 from "../assets/Images/fastfood_logo.png";
-import ProductCard from '../Components/UI/Product-card/ProductCard';
+import ProductCard from "../Components/UI/Product-card/ProductCard";
 
 import category from "../Components/UI/Category/Category";
 
-
-
 function Orders() {
-
-
-
-  const [text, setText] = useState("")
-  const [fullText] = useState(
-    "Filtering products by category."
-  )
+  const [text, setText] = useState("");
+  const [fullText] = useState("Filtering products by category.");
   const [index, setIndex] = useState(0);
   useEffect(() => {
     if (index < fullText.length) {
       setTimeout(() => {
-        setText(text + fullText[index])
-        setIndex(index + 1)
-      }, 40)
+        setText(text + fullText[index]);
+        setIndex(index + 1);
+      }, 40);
     }
-  }, [index])
-
+  }, [index]);
 
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
@@ -113,7 +104,7 @@ function Orders() {
       );
 
       setAllProducts(filteredProducts);
-    };
+    }
 
     if (category === "ICE_CREAM") {
       const filteredProducts = products.filter(
@@ -121,7 +112,7 @@ function Orders() {
       );
 
       setAllProducts(filteredProducts);
-    };
+    }
 
     if (category === "FAST_FOOD") {
       const filteredProducts = products.filter(
@@ -130,15 +121,11 @@ function Orders() {
 
       setAllProducts(filteredProducts);
     }
-
   }, [category]);
-
-  
 
   return (
     <>
-
-{/* <div>
+      {/* <div>
   <StickyContainer>
     <Sticky>{({ style }) => (
       <header style={style}>
@@ -151,44 +138,69 @@ function Orders() {
   </StickyContainer>
 </div> */}
 
-      <motion.div className="main"
-
+      <motion.div
+        className="main"
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
         exit={{ Y: 0, transition: { duration: 1.5 } }}
       >
-        
         <div className="filter">
           <h2>{text}</h2>
-          <section >
+          <section>
             <Col lg="12">
               <div className="food__category d-block align-items-center justify-content-center mb-1">
-                <button className="category__btn all__button m-0" onClick={() => setCategory('ALL')}>All</button>
-                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BURGER')}>
+                <button
+                  className="category__btn all__button m-0"
+                  onClick={() => setCategory("ALL")}
+                >
+                  All
+                </button>
+                <button
+                  className="category__btn d-block align-items-center m-0"
+                  onClick={() => setCategory("BURGER")}
+                >
                   <img src={foodCategoryImg01} alt="" />
                   Burger
                 </button>
-                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('PIZZA')}>
+                <button
+                  className="category__btn d-block align-items-center m-0"
+                  onClick={() => setCategory("PIZZA")}
+                >
                   <img src={foodCategoryImg02} alt="" />
                   Pizza
                 </button>
-                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BREAD')}>
+                <button
+                  className="category__btn d-block align-items-center m-0"
+                  onClick={() => setCategory("BREAD")}
+                >
                   <img src={foodCategoryImg03} alt="" />
                   Bread
                 </button>
-                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('AFRICA')}>
+                <button
+                  className="category__btn d-block align-items-center m-0"
+                  onClick={() => setCategory("AFRICA")}
+                >
                   <img src={foodCategoryImg04} alt="" />
                   Local Cuisine
                 </button>
-                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('BEVERAGES')}>
+                <button
+                  className="category__btn d-block align-items-center m-0"
+                  onClick={() => setCategory("BEVERAGES")}
+                >
                   <img src={foodCategoryImg05} alt="" />
                   Beverages
                 </button>
-                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('ICE_CREAM')}>
+                <button
+                  className="category__btn d-block align-items-center m-0"
+                  onClick={() => setCategory("ICE_CREAM")}
+                >
                   <img src={foodCategoryImg06} alt="" />
                   Ice Cream
                 </button>
-                <button className="category__btn d-block align-items-center m-0" onClick={() => setCategory('FAST_FOOD')}>
+                <button
+                  className="category__btn d-block align-items-center m-0"
+                  onClick={() => setCategory("FAST_FOOD")}
+                >
                   <img src={foodCategoryImg07} alt="" />
                   Fastfood
                 </button>
@@ -203,17 +215,11 @@ function Orders() {
             </h4>
 
             <MDBRow>
-
-              {
-                allProducts.map(item => (
-                  <Col lg='3' md='4' key={item.id} className="mt-5">
-
-                    <ProductCard item={item} />
-
-                  </Col>
-                ))
-              }
-
+              {allProducts.map((item) => (
+                <Col lg="3" md="4" key={item.id} className="mt-5">
+                  <ProductCard item={item} />
+                </Col>
+              ))}
 
               {/* <MDBCol md="6" lg="4" className="mb-4">
         <MDBCard>
@@ -254,8 +260,6 @@ function Orders() {
           </MDBCardBody>
         </MDBCard>
       </MDBCol> */}
-
-
 
               {/* <MDBCol md="6" lg="4" className="mb-4">
         <MDBCard>
@@ -299,13 +303,6 @@ function Orders() {
           </MDBCardBody>
         </MDBCard>
       </MDBCol> */}
-
-
-
-
-
-
-
             </MDBRow>
           </MDBContainer>
         </div>
@@ -340,14 +337,16 @@ function Orders() {
       </select>
       </section> */}
       </motion.div>
-
     </>
   );
 }
 export default Orders;
-{/* export default Menu; */ }
+{
+  /* export default Menu; */
+}
 
-{/* <motion.div
+{
+  /* <motion.div
         className="main"
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
@@ -620,12 +619,11 @@ export default Orders;
             </MDBRow>
           </MDBContainer>
         </div>
-      </motion.div> */}
+      </motion.div> */
+}
 
-
-
-
-{/* <Section>
+{
+  /* <Section>
       <div className="container d-flex d-inline-flex">
         <div className='divP 1'>
           <img className='pic 1' src='./logo192.png' alt='not found' />
@@ -654,9 +652,9 @@ export default Orders;
         <option>Credit Card</option>
         <option>Visa</option>
       </select>
-      </Section> */}
+      </Section> */
+}
 
-
-
-
-{/* export default Orders; */ }
+{
+  /* export default Orders; */
+}

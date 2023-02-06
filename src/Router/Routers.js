@@ -93,7 +93,7 @@ const Routers = () => {
             path="/products"
             element={<New inputs={productInputs} title="Add New Product" />}
           ></Route>
-          <Route path="/orders">
+          <Route path="/orders_Dash">
             <Route index element={<List />} />
             <Route path=":orderId" element={<Single />} />
           </Route>

@@ -45,7 +45,7 @@ const Sidebar = () => {
               <span>Products</span>
             </li>
           </Link>
-          <Link to="/orders" style={{ textDecoration: "none" }}>
+          <Link to="/orders_Dash" style={{ textDecoration: "none" }}>
             <li>
               <AttachMoneyOutlinedIcon className="icon" />
               <span>Orders</span>

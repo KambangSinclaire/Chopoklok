@@ -20,6 +20,7 @@ import { motion } from "framer-motion";
 import whyImg from "../assets/Images/whyChop.svg";
 
 import newHero from "../assets/Images/chopoklok_Del.svg";
+import Hero3 from "../assets/Images/eating.svg";
 
 /* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
@@ -137,7 +138,7 @@ const Home = () => {
 
             <Col lg="6" md="6">
               <div className="hero__img">
-                <img src="../Image/hero.png" alt="hero-img" className="w-100" />
+                <img src={newHero} alt="hero-img" className="w-100" />
               </div>
             </Col>
           </Row>
@@ -167,7 +168,7 @@ const Home = () => {
 
               <Col lg="6" md="6">
                 <div className="hero__img">
-                  <img src={newHero} alt="hero-img" className="w-100" />
+                  <img src={Hero3} alt="hero-img" className="w-100" />
                 </div>
               </Col>
             </Row>

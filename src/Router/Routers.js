@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 // import Cart from '../Pages/Cart';
 // import Checkout from '../Pages/Checkout';
@@ -15,6 +15,10 @@ import AllFoods from "../Pages/AllFoods";
 
 /* import Cart from '../Pages/Cart'; */
 /* import Checkout from '../Pages/Checkout'; */
+import Contact from "../Pages/Contact";
+import Login from "../Components/Dashboard/Login";
+import Signup from "../Pages/Signup";
+import Signin from "../Pages/Signin";
 /* import Dashboard from '../Pages/Dashboard'; */
 //import Nav from '../Components/Dashboard/Dash_Nav'
 import Dashboard from "../Components/Dashboard/Dashboard";
@@ -23,46 +27,27 @@ import Single from "../Components/Dashboard/Single";
 import New from "../Components/Dashboard/New";
 import { productInputs, userInputs } from "../formSource";
 import CartCheckout from "../Pages/Cart_checkout";
- import { AuthContext } from "../Components/Context/AuthContext";
-// import Menu from "../Pages/Menu";
-
-import Notifications from "react-notifications-menu";
-
-  
-
-// const Routers = () => {
-//   return <Routes>
-//     <Route path='/' element={<Navigate to='/home'/>} />
-//     <Route path='/home' element={< Home/>} />
-//     <Route path='/menu' element={<Menu/>} />
-//     <Route path='/product/:id' element={<ProductCard/>} />
-//     <Route path='/cart_checkout' element={<Cart_checkout/>} />
-//     {/* <Route path='/checkout' element={<Checkout/>} /> */}
-//     <Route path='/login' element={<Login/>} />
-//     <Route path='/register' element={<Register/>} />
-//     <Route path='/contact' element={<Contact/>} />
-//     
-
+import { AuthContext } from "../Components/Context/AuthContext";
+import Menu from "../Pages/Menu";
 
 const Routers = () => {
-   const {currentUser} = useContext(AuthContext)
-   const RequireAuth = ({ childern }) => {
-     return currentUser ? childern : <Navigate to="/login" />;
-   };
- console.log(currentUser)
- 
+  
+  const {currentUser} = useContext(AuthContext)
+  const RequireAuth = ({ childern }) => {
+    return currentUser ? childern : <Navigate to="/login" />;
+  };
+console.log(currentUser)
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="/home" element={<Home />} />
       <Route path="/menu" element={<Menu />} />
-      <Route path="/cart-checkout" element={<Cart_checkout />} />
+      <Route path="/foods/:id" element={<FoodDetails />} />
+      <Route path="/cart-checkout" element={<CartCheckout />} />
       {/* <Route path='/checkout' element={<Checkout/>} /> */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path='/Notification' element={<Notify/>} /> 
-      {/* <Route path='/Notification' element={<Notifications notificationCard={CustomComponent} data={data} />} /> */}
       <Route
         path="/dashboard"
         element={
@@ -97,33 +82,17 @@ const Routers = () => {
         />
       </Route>
 
-      <Route path="/products">
-        <Route
-          index
-          element={
-    
-              <List />
-          }
-        />
-        <Route
-          path=":productId"
-          element={
-          
-              
-              <Single />
-           
-          }
-        />
-        <Route
-          path="new"
-          element={
-           
-              <New inputs={productInputs} title="Add New Product" />
-            
-          }
-        />
-      </Route>
-    </Routes>
+          <Route path="/products">
+            <Route index element={<List />} />
+            <Route path=":productId" element={<Single />} />
+            <Route
+              path="new"
+              element={<New inputs={productInputs} title="Add New Product" />}
+            />
+          </Route>
+        </Routes>
+      </AuthContextProvider>
+    </AnimatePresence>
   );
 };
 

@@ -4,10 +4,12 @@ import Contact from "./Pages/Contact";
 
 function App() {
   return (
+  (
     <>
-    <Layout />
+    <Layout  />
     {/* <Contact /> */}
     </>
+  )
   )
 
 }

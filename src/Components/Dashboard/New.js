@@ -3,39 +3,27 @@ import React, { useState } from 'react';
 import Sidebar from '../Dash-Sidebar/Sidebar';
 import Navbar from '../Dash-Navbar/Navbar';
 import { DriveFolderUploadOutlined } from '@mui/icons-material';
-import { addDoc, collection, doc, serverTimestamp, setDoc, Timestamp } from "firebase/firestore";  
-import { auth, db } from '../../firebase';
-import {createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc, addDoc, collection, serverTimestamp} from "firebase/firestore";  
 
+import { db } from '../../firebase';
 
 const New = ({inputs,title}) => {
   const [file,setFile] = useState('');
-  const [product, setProduct] = useState({});
-  const handleInput = (e) => {
-    const id = e.target.id 
-    const value = e.target.value
-
-    setProduct({...product, [id]: value});
-    console.log(product)
-  }
   const handleAdd = async(e) =>{
     e.preventDefault();
-    try {
-      const res = await createUserWithEmailAndPassword(
-        auth,
-        product.email,
-        product.password
-        )
-      await setDoc(doc(db, "users", res.user.id), {
-        ...product,
-        Timestamp:serverTimestamp()
-      });
-      console.log(res)
+      try {
+        const res =  await addDoc(collection(db, "products4",), {
       
-    } catch (error) {
-      console.log(error)
-    }
-
+          category: "Meal",
+          description: "Delicious rice & stew with spaghetti and chicken sauce",
+          price :"2000F",
+          title :"Rice & stew",
+          timeStamp: serverTimestamp()
+              });
+             
+      } catch (error) {
+        
+      }
   }
   return (
     <div className='new'>
@@ -59,7 +47,7 @@ const New = ({inputs,title}) => {
                 {inputs.map((input)=>(
                    <div className="formInput" key={input.id}>
                    <label>{input.label}</label>
-                   <input id={input.id} type={input.type} placeholder={input.placeholder} onChange={handleInput}/>
+                   <input type={input.type} placeholder={input.placeholder}/>
                  </div>
                 ))}
                 <button type='submit'>Send</button>    

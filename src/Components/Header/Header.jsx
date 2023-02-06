@@ -3,9 +3,7 @@ import { Container } from "reactstrap";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/Images/res-logo.png";
 
-
 import "../../Styles/header.css";
-
 const nav_links = [
   {
     display: "Home",
@@ -17,13 +15,16 @@ const nav_links = [
   },
   {
     display: "Cart",
-    path: "/cart-checkout",
+    path: "/cart",
   },
   {
     display: "Contact",
     path: "/contact",
   },
-  
+  {
+    display: "Signin",
+    path: "/signin",
+  },
 ];
 
 const Header = () => {
@@ -66,16 +67,9 @@ const Header = () => {
               </Link>
             </span>
 
-            <span className="user">
-              <Link to="/Notification">
-              <i class="ri-notification-4-line" ></i>
-              </Link>
-            </span>
-
             <span className="mobile_menu" onClick={toggleMenu} >
               <i class="ri-menu-line"></i>
             </span>
-
           </div>
         </div>
       </Container>

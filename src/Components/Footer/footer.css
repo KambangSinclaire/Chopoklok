@@ -1,14 +1,16 @@
 .footer{
-    padding: 50px 0px;
-    background: #fde4e4;
-    
+    padding: 10px 0px;
+    background: #0210209f;
 }
 
 .footer_logo{
 width: calc(100% - 80%); 
 margin-bottom: 5px;
 }
-
+.Row{
+  display: flex;
+  justify-content: space-between;
+}
 .footer_logo h5{
     font-weight: 600;
     font-size: 1rem;
@@ -61,11 +63,13 @@ margin-bottom: 5px;
   }
   
   .newsletter span {
-    background: #df2020;
+    background: #0210209f;
     padding: 5px 30px;
     border-radius: 5px;
   }
-  
+  .newsletter-input{
+    background: #456f9e36; 
+  }
   .newsletter span i {
     color: #fff;
   }
@@ -79,6 +83,7 @@ margin-bottom: 5px;
     background: #df2020;
     color: #fff;
     border-radius: 50%;
+    text-decoration: none;
   }
   
   .copyright__text {

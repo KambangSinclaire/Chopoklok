@@ -79,7 +79,7 @@ export default function CartCheckout() {
                         Total:
                       </MDBTypography>
                       <MDBTypography tag="h5" className="fw-bold mb-0">
-                        {totalPrice.toFixed(2)} FCFA
+                        {totalPrice} FCFA
                       </MDBTypography>
                     </div>
                   </MDBCol>

@@ -16,7 +16,7 @@ const Datable = () => {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            <Link to="/users/test" style={{ textDecoration: "none" }}>
+            <Link to=":orderId" style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
             </Link>
 
@@ -34,12 +34,12 @@ const Datable = () => {
 
   return (
     <div className="datatable">
-      <div className="datatableTitle">
-        Add New User
-        <Link to="/users/new" className="link">
+      {/*  <div className="datatableTitle">
+        Add New Product
+        <Link to="/products/new" className="link">
           Add New
         </Link>
-      </div>
+      </div> */}
       <DataGrid
         rows={data}
         columns={userColumns.concat(actionColumn)}

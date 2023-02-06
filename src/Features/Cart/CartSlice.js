@@ -40,8 +40,10 @@ const cartSlice = createSlice({
       state.cartItems.forEach((item) => {
         // Track amount of items in cart
         amount += item.amount;
+        console.log(amount + "amount");
         // Calculate Monetary total in cart
         total2 += item.amount * item.price;
+        console.log(total2 + "total");
       });
       state.itemAmountInCart = amount;
       state.totalPrice = total2;

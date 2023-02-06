@@ -36,55 +36,59 @@ export default function CartCheckout() {
       animate={{ width: "100%" }}
       exit={{ Y: 0, transition: { duration: 1.5 } }}
     >
-      <MDBContainer className="h-100 py-5">
-        <MDBRow className="justify-content-center align-items-center h-100">
-          <MDBCol>
-            <MDBCard className="shopping-cart" style={{ borderRadius: "15px" }}>
-              <MDBCardBody className="text-black">
-                <MDBRow>
-                  <MDBCol lg="7" className="px-5 py-4">
-                    <MDBTypography
-                      tag="h3"
-                      className="mb-5 pt-2 text-center fw-bold text-uppercase"
-                    >
-                      Your products
-                    </MDBTypography>
+      <div className="cart-container">
+        <MDBContainer className="h-100 py-5">
+          <MDBRow className="justify-content-center align-items-center h-100">
+            <MDBCol>
+              <MDBCard
+                className="shopping-cart"
+                style={{ borderRadius: "15px" }}
+              >
+                <MDBCardBody className="text-black">
+                  <MDBRow>
+                    <MDBCol lg="7" className="px-5 py-4">
+                      <MDBTypography
+                        tag="h3"
+                        className="mb-5 pt-2 text-center fw-bold text-uppercase"
+                      >
+                        Your products
+                      </MDBTypography>
 
-                    {/*  <CartItem /> */}
+                      {/*  <CartItem /> */}
 
-                    {cartItems.map((item) => {
-                      return (
-                        <CartItem key={item} {...item} img={item.image01} />
-                      );
-                    })}
+                      {cartItems.map((item) => {
+                        return (
+                          <CartItem key={item} {...item} img={item.image01} />
+                        );
+                      })}
 
-                    <hr
-                      className="mb-4"
-                      style={{
-                        height: "2px",
-                        backgroundColor: "#1266f1",
-                        opacity: 1,
-                      }}
-                    />
+                      <hr
+                        className="mb-4"
+                        style={{
+                          height: "2px",
+                          backgroundColor: "#1266f1",
+                          opacity: 1,
+                        }}
+                      />
 
-                    {/* <div className="d-flex justify-content-between px-x">
+                      {/* <div className="d-flex justify-content-between px-x">
                       <p className="fw-bold">Discount:</p>
                       <p className="fw-bold">95$</p>
                     </div> */}
-                    <div
-                      className="d-flex justify-content-between p-2 mb-2"
-                      style={{ backgroundColor: "#e1f5fe" }}
-                    >
-                      <MDBTypography tag="h5" className="fw-bold mb-0">
-                        Total:
-                      </MDBTypography>
-                      <MDBTypography tag="h5" className="fw-bold mb-0">
-                        {totalPrice} FCFA
-                      </MDBTypography>
-                    </div>
-                  </MDBCol>
+                      <div
+                        className="d-flex justify-content-between p-2 mb-2"
+                        style={{ backgroundColor: "#e1f5fe" }}
+                      >
+                        <MDBTypography tag="h5" className="fw-bold mb-0">
+                          Total:
+                        </MDBTypography>
+                        <MDBTypography tag="h5" className="fw-bold mb-0">
+                          {totalPrice} FCFA
+                        </MDBTypography>
+                      </div>
+                    </MDBCol>
 
-                  {/*  <MDBCol lg="5" className="px-5 py-4">
+                    {/*  <MDBCol lg="5" className="px-5 py-4">
                     <MDBTypography
                       tag="h3"
                       className="mb-5 pt-2 text-center fw-bold text-uppercase"
@@ -165,14 +169,14 @@ export default function CartCheckout() {
                       </MDBTypography>
                     </form>
                   </MDBCol> */}
-
+                  </MDBRow>
                   <ClearCartModal />
-                </MDBRow>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </div>
     </motion.section>
   );
 }

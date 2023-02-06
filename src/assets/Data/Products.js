@@ -53,6 +53,7 @@ const Products = [
     image02: product_01_image_02,
     image03: product_01_image_03,
     category: "Burger",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -65,6 +66,7 @@ const Products = [
     image02: product_02_image_02,
     image03: product_02_image_03,
     category: "Pizza",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -77,6 +79,7 @@ const Products = [
     image02: product_03_image_02,
     image03: product_03_image_03,
     category: "Pizza",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -89,6 +92,7 @@ const Products = [
     image02: product_04_image_02,
     image03: product_04_image_03,
     category: "Pizza",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -101,6 +105,7 @@ const Products = [
     image02: product_05_image_02,
     image03: product_05_image_03,
     category: "Burger",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -112,6 +117,7 @@ const Products = [
     image02: product_01_image_02,
     image03: product_01_image_03,
     category: "Burger",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -124,6 +130,7 @@ const Products = [
     image02: product_02_image_01,
     image03: product_02_image_03,
     category: "Pizza",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -136,6 +143,7 @@ const Products = [
     image02: product_03_image_01,
     image03: product_03_image_03,
     category: "Pizza",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -148,6 +156,7 @@ const Products = [
     image02: product_04_image_01,
     image03: product_04_image_03,
     category: "Pizza",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -160,6 +169,7 @@ const Products = [
     image02: product_05_image_01,
     image03: product_05_image_03,
     category: "Burger",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -172,6 +182,7 @@ const Products = [
     image02: product_06_image_02,
     image03: product_06_image_03,
     category: "Bread",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -184,6 +195,7 @@ const Products = [
     image02: product_06_image_01,
     image03: product_06_image_03,
     category: "Bread",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },
@@ -196,6 +208,7 @@ const Products = [
     image02: product_06_image_02,
     image03: product_06_image_03,
     category: "Bread",
+    amount: 1,
 
     desc: "Sweet Chicken and rice",
   },

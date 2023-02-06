@@ -34,7 +34,7 @@ const Contact = () => {
                 <div className='contact-widget'>
                     <div className='contact-widget-item'>
                         <div className='icon'>
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i className="fa-solid fa-location-dot"></i>
                         </div>
 
                         <div className='text'>
@@ -78,7 +78,7 @@ const Contact = () => {
                         <input type='text' placeholder='Name' name='name' onChange={handleChange} value={name} required/>
                         <input type='email' placeholder='Email' name='email' onChange={handleChange}  value={email} required/>
                         <textarea placeholder='Comment' name='message' onChange={handleChange}  value={message} required></textarea>
-                        <button type='submit'>Send Message</button>
+                        <button type='submit'className="site-btn">Send Message</button>
                     </form>
                 </div>
             </div>

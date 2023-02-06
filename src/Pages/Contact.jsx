@@ -2,7 +2,6 @@ import  { useState } from "react";
 import React,{Fragment} from 'react'
 import '../Styles/contact.css'
 
-
 const defaultValues = {
     name: '',
     email: '',

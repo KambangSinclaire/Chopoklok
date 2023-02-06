@@ -12,7 +12,7 @@
 }
 
 .contact-heading h2{
-    color: rgb(219, 9, 9);
+    color: #0210209f;
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -20,25 +20,6 @@
     font-family: 'Bai Jamjuree' sans-serif;
 }
 
-/* .contact-heading h2::before{
-    position: absolute;
-    top: 50%;
-    right: -80%;
-    content: '';
-    width: 70px;
-    height: 2px;
-    background: #287ff9;
-}
-
-.contact-heading h2::after{
-    position: absolute;
-    top: 50%;
-    right: -80%;
-    content: '';
-    width: 70px;
-    height: 2px;
-    background: #287ff9;
-} */
 
 .container{
     /* max-width: 1170px;
@@ -70,7 +51,7 @@
 .icon{
     height: 60px;
     width: 60px;
-    background: rgb(219, 9, 9);
+    background: #0210209f;
     border-radius: 50%;
     line-height: 60px;
     text-align: center;
@@ -149,8 +130,8 @@ form button{
 .site-btn{
     border:none;
     display: inline-block;
-    background: rgb(209, 16, 16);
-    color: rgb(10, 10, 10);
+    background: #0210209f;
+    color: rgb(255, 255, 255);
     font-size: 14px;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;

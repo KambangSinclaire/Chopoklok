@@ -29,13 +29,7 @@ export default function CartCheckout() {
     alert("Your cart is empty");
   } */
   return (
-    <motion.section
-      className="h-100 h-custom"
-      style={{ backgroundColor: "#eee" }}
-      initial={{ width: 0 }}
-      animate={{ width: "100%" }}
-      exit={{ Y: 0, transition: { duration: 1.5 } }}
-    >
+    <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
       <MDBContainer className="h-100 py-5">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol>
@@ -173,6 +167,6 @@ export default function CartCheckout() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-    </motion.section>
+    </section>
   );
 }

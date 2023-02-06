@@ -1,13 +1,21 @@
 import React, { useContext } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-
+import FoodDetails from '../Pages/FoodDetails';
+// import Cart from '../Pages/Cart';
+// import Checkout from '../Pages/Checkout';
+import Contact from '../Pages/Contact';
+import Login from '../Components/Dashboard/Login'
+import Register from '../Pages/Register';
+import Notify from '../Pages/Notification';
+import Cart_checkout from '../Pages/Cart_checkout';
+import ProductCard from '../Pages/ProductCard';
 import Home from "../Pages/Home";
 import AllFoods from "../Pages/AllFoods";
-import FoodDetails from "../Pages/FoodDetails";
+
 /* import Cart from '../Pages/Cart'; */
 /* import Checkout from '../Pages/Checkout'; */
-import Contact from "../Pages/Contact";
-import Login from "../Components/Dashboard/Login";
+// import Contact from "../Pages/Contact";
+// import Login from "../Components/Dashboard/Login";
 import Signup from "../Pages/Signup";
 import Signin from "../Pages/Signin";
 /* import Dashboard from '../Pages/Dashboard'; */

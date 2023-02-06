@@ -14,14 +14,11 @@ import {
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
-<<<<<<< HEAD
-=======
 import { motion } from "framer-motion";
 import CartItem from "../Pages/cartItem";
 import ClearChopoklokCart from "../Features/Cart/CartSlice";
 import { Link } from "react-router-dom";
 import ClearCartModal from "../Components/Modals/ClearCartModal";
->>>>>>> 20e72b0ba5c76cb51f50f47f4340ff16d399929a
 
 export default function CartCheckout() {
   const dispatch = useDispatch();

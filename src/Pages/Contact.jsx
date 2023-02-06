@@ -1,13 +1,13 @@
 import  { useState } from "react";
-// export default Contact;
+import React,{Fragment} from 'react'
+import '../Styles/contact.css'
+
+
 const defaultValues = {
     name: '',
     email: '',
     message: ''
 }
-
-import React,{Fragment} from 'react'
-import '../Styles/contact.css'
 
 const Contact = () => {
     const [formField, setformFields ] = useState(defaultValues);

@@ -24,7 +24,6 @@ import featureImg01 from "../assets/Images/service-01.webp";
 import featureImg02 from "../assets/Images/service-02.webp";
 import featureImg03 from "../assets/Images/service-03.webp";
 
-import { StickyContainer, Sticky } from 'react-sticky';
 import foodCategoryImg01 from "../assets/Images/hamburger.png";
 import foodCategoryImg02 from "../assets/Images/pizza.png";
 import foodCategoryImg03 from "../assets/Images/bread.png";

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-
+import FoodDetails from '../Pages/FoodDetails';
 // import Cart from '../Pages/Cart';
 // import Checkout from '../Pages/Checkout';
 import Contact from '../Pages/Contact';
@@ -27,7 +27,6 @@ import New from "../Components/Dashboard/New";
 import { productInputs, userInputs } from "../formSource";
 import CartCheckout from "../Pages/Cart_checkout";
 import { AuthContext } from "../Components/Context/AuthContext";
-import { AnimatePresence } from "framer-motion/dist/cjs";
 import Menu from "../Pages/Menu";
 import { AuthContextProvider } from "../context/Authcontext";
 import ProtectedRoute from "../Pages/protectedRoute";

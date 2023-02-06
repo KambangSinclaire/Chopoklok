@@ -3,8 +3,6 @@ import product_01_image_01 from "../Images/product_01.jpg";
 import product_01_image_02 from "../Images/product_01.1.jpg";
 import product_01_image_03 from "../Images/product_01.3.jpg";
 
-
-
 import product_02_image_01 from "../Images/product_2.1.jpg";
 import product_02_image_02 from "../Images/product_2.2.jpg";
 import product_02_image_03 from "../Images/product_2.3.jpg";
@@ -46,350 +44,378 @@ import IceCream_001 from "../Images/Ice_cream_001.png";
 import IceCream_002 from "../Images/Ice_cream_002.png";
 import IceCream_003 from "../Images/Ice_cream_003.png";
 
-
 const Products = [
   {
     id: 1,
     title: "Chicken Burger",
-    price: 24.0,
+    price: 1000,
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
     category: "Burger",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. ",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 2,
     title: "Vegetarian Pizza",
-    price: 115.0,
+    price: 1000,
     image01: product_02_image_01,
     image02: product_02_image_02,
     image03: product_02_image_03,
     category: "Pizza",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 3,
     title: "Double Cheese Margherita",
-    price: 110.0,
+    price: 1000,
     image01: product_03_image_01,
     image02: product_03_image_02,
     image03: product_03_image_03,
     category: "Pizza",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 4,
     title: "Maxican Green Wave",
-    price: 110.0,
+    price: 1000,
     image01: product_04_image_01,
     image02: product_04_image_02,
     image03: product_04_image_03,
     category: "Pizza",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 5,
     title: "Cheese Burger",
-    price: 24.0,
+    price: 1000,
     image01: product_05_image_01,
     image02: product_05_image_02,
     image03: product_05_image_03,
     category: "Burger",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
   {
     id: 6,
     title: "Royal Cheese Burger",
-    price: 24.0,
+    price: 1000,
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
     category: "Burger",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 7,
     title: "Seafood Pizza",
-    price: 115.0,
+    price: 1000,
     image01: product_02_image_02,
     image02: product_02_image_01,
     image03: product_02_image_03,
     category: "Pizza",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 8,
     title: "Thin Cheese Pizza",
-    price: 110.0,
+    price: 1000,
     image01: product_03_image_02,
     image02: product_03_image_01,
     image03: product_03_image_03,
     category: "Pizza",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 9,
     title: "Pizza With Mushroom",
-    price: 110.0,
+    price: 1000,
     image01: product_04_image_02,
     image02: product_04_image_01,
     image03: product_04_image_03,
     category: "Pizza",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 10,
     title: "Classic Hamburger",
-    price: 24.0,
+    price: 1000,
     image01: product_05_image_02,
     image02: product_05_image_01,
     image03: product_05_image_03,
     category: "Burger",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 11,
     title: "Crunchy Bread ",
-    price: 35.0,
+    price: 1000,
     image01: product_06_image_01,
     image02: product_06_image_02,
     image03: product_06_image_03,
     category: "Bread",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 12,
     title: "Delicious Bread ",
-    price: 35.0,
+    price: 1000,
     image01: product_06_image_02,
     image02: product_06_image_01,
     image03: product_06_image_03,
     category: "Bread",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
 
   {
     id: 13,
     title: "Loaf Bread ",
-    price: 35.0,
+    price: 1000,
     image01: product_06_image_03,
     image02: product_06_image_02,
     image03: product_06_image_03,
     category: "Bread",
+    amount: 1,
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+    desc: "Sweet Chicken and rice",
   },
   {
     id: 14,
     title: "Ekwang",
-    price: 18.0,
+    price: 1000,
     image01: African_4,
     image02: African_4,
     image03: African_4,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 15,
     title: "Corn-Chaf",
-    price: 12.0,
+    price: 1000,
     image01: African_3,
     image02: African_3,
     image03: African_3,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 16,
     title: "Achu",
-    price: 20.0,
+    price: 1000,
     image01: African_1,
     image02: African_1,
     image03: African_1,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 17,
     title: "Eru and Garri",
-    price: 15.0,
+    price: 1000,
     image01: African_2,
     image02: African_2,
     image03: African_2,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 18,
     title: "Fufu Corn and Huckleberry",
-    price: 25.0,
+    price: 1000,
     image01: African_5,
     image02: African_5,
     image03: African_5,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 19,
     title: "Ikok",
-    price: 20.0,
+    price: 1000,
     image01: African_6,
     image02: African_6,
     image03: African_6,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 20,
     title: "Kwacoco",
-    price: 17.0,
+    price: 1000,
     image01: African_7,
     image02: African_7,
     image03: African_7,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 21,
     title: "Ndolè",
-    price: 13.0,
+    price: 1000,
     image01: African_8,
     image02: African_8,
     image03: African_8,
     category: "African",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 22,
     title: "Fruit Drink 1",
-    price: 6.0,
+    price: 1000,
     image01: Fruit_drink_001,
     image02: Fruit_drink_001,
     image03: Fruit_drink_001,
     category: "Beverages",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 23,
     title: "Cocktail",
-    price: 10.0,
+    price: 1000,
     image01: Fruit_drink_002,
     image02: Fruit_drink_002,
     image03: Fruit_drink_002,
     category: "Beverages",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 24,
     title: "Assorted",
-    price: 7.0,
+    price: 1000,
     image01: Fruit_drink_003,
     image02: Fruit_drink_003,
     image03: Fruit_drink_003,
     category: "Beverages",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 25,
     title: "Cream in glass",
-    price: 6.0,
+    price: 1000,
     image01: IceCream_001,
     image02: IceCream_001,
     image03: IceCream_001,
     category: "Ice_Cream",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 26,
     title: "Cup Cream",
-    price: 9.0,
+    price: 1000,
     image01: IceCream_002,
     image02: IceCream_002,
     image03: IceCream_002,
     category: "Ice_Cream",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 27,
     title: "Bunches on plate cream",
-    price: 10.0,
+    price: 1000,
     image01: IceCream_003,
     image02: IceCream_003,
     image03: IceCream_003,
     category: "Ice_Cream",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 28,
     title: "Patotoe chips and burger",
-    price: 14.0,
+    price: 1000,
     image01: FastFood_001,
     image02: FastFood_001,
     image03: FastFood_001,
     category: "FastFood",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 29,
     title: "Potatoe chips burger and Pepper",
-    price: 15.0,
+    price: 1000,
     image01: FastFood_002,
     image02: FastFood_002,
     image03: FastFood_002,
     category: "FastFood",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
     id: 30,
     title: "Grilled chicken",
-    price: 15.0,
+    price: 1000,
     image01: FastFood_003,
     image02: FastFood_003,
     image03: FastFood_003,
     category: "FastFood",
+    amount: 1,
 
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
-  
 ];
 
 export default Products;

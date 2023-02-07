@@ -358,7 +358,7 @@ const Products = [
   },
   {
     id: 28,
-    title: "Patotoe chips and burger",
+    title: "Potatoe chips and burger",
     price: 14.0,
     image01: FastFood_001,
     image02: FastFood_001,

@@ -75,7 +75,6 @@ function Orders() {
     }
 
     if (category === "BURGER") {
-      {const cartName = "BURGER"};
       const filteredProducts = products.filter(
         (item) => item.category === "Burger"
       );

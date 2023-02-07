@@ -1,0 +1,43 @@
+/* * {
+  background-color: #f9f9f9;
+} */
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  height: 400px;
+}
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+}
+.mainContainer {
+  width: fit-content;
+  height: fit-content;
+  /* border: 1px solid black; */
+  margin: 54px;
+}
+
+.cascading-right {
+  margin-right: -40px;
+}
+
+@media (max-width: 900px) {
+  .cascading-right {
+    margin-right: 0;
+  }
+}
+.inputBox {
+  width: 70%;
+}
+
+.avatar {
+  /*  width: 40px; */
+  height: fit-content;
+}

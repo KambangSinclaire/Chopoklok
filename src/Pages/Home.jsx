@@ -17,9 +17,10 @@ import featureImg03 from "../assets/Images/service-03.webp";
 import { motion } from "framer-motion";
 /* import ProductCard from "../Components/UI/Product-card/ProductCard.js";
  */
-import whyImg from "../assets/Images/location.png";
+import whyImg from "../assets/Images/whyChop.svg";
 
-
+import newHero from "../assets/Images/chopoklok_Del.svg";
+import Hero3 from "../assets/Images/eating.svg";
 
 /* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
@@ -85,28 +86,23 @@ const Home = () => {
   }, [Category]); */
   return (
     <motion.div
-    
-    initial={{ width: 0 }}
-    animate={{ width: "100%" }}
-    exit={{ Y: 0, transition: { duration: 1.5 } }}>
-
-<Helmet
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ Y: 0, transition: { duration: 1.5 } }}
     >
-      <section>
-        <Container>
-          <Row>
-            <Col lg="6" md="6">
-              <div className="hero__content  ">
-                
-                <h1 className="mb-4 hero__title">
-                  <span>HUNGRY?</span> Sign up <br /> 
-                  and have food 
-                  <br /> delivered at your
-                  <br /> door step
-                  <span></span>
-                </h1>
+      
+        <section>
+          <Container>
+            <Row>
+              <Col lg="6" md="6">
+                <div className="hero__content  ">
+                  <h5 className="mb-3">Easy way to make an order</h5>
+                  <h1 className="mb-4 hero__title">
+                    <span>HUNGRY?</span> Sign up <br /> and have food deliverd
+                    <span></span>
+                  </h1>
 
-                {/*  <p>
+                  {/*  <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
                   magni delectus tenetur autem, sint veritatis!
                 </p> */}
@@ -129,19 +125,20 @@ const Home = () => {
                     Cheap Transportation
                   </p>
 
-                  <p className=" d-flex align-items-center gap-2 ">
-                    <span className="shipping__icon">
-                      <i className="ri-shield-check-line"></i>
-                    </span>{" "}
-                    100% secure checkout
-                  </p>
+                    <p className=" d-flex align-items-center gap-2 ">
+                      <span className="shipping__icon">
+                        <i className="ri-shield-check-line"></i>
+                      </span>{" "}
+                      100% secure checkout
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Col>
+            {/*   </div> */}
+            </Col> 
 
             <Col lg="6" md="6">
               <div className="hero__img">
-                <img src="../Image/hero.png" alt="hero-img" className="w-100" />
+                <img src={newHero} alt="hero-img" className="w-100" />
               </div>
             </Col>
           </Row>
@@ -169,24 +166,54 @@ const Home = () => {
               </p>
             </Col>
 
-            {featureData.map((item, index) => (
-              <Col lg="4" md="6" sm="6" key={index} className="mt-5">
-                <div className="feature__item text-center px-5 py-3">
-                  <img
-                    src={item.imgUrl}
-                    alt="feature-img"
-                    className="w-25 mb-3"
-                  />
-                  <h5 className=" fw-bold mb-3">{item.title}</h5>
-                  <p>{item.desc}</p>
+              <Col lg="6" md="6">
+                <div className="hero__img">
+                  <img src={Hero3} alt="hero-img" className="w-100" />
                 </div>
               </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+            </Row>
+          </Container>
+        </section>
+        <section className="pt-0">
+         {/*  <Category /> */}
+        </section>
+        <section>
+          <Container>
+            <Row>
+              <Col lg="12" className="text-center">
+                <h5 className="feature__subtitle mb-4">What we serve</h5>
+                <h2 className="feature__title">Just sit back at home</h2>
+                <h2 className="feature__title">
+                  we will <span>take care</span>
+                </h2>
+                <p className="mb-1 mt-4 feature__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolor, officiis?
+                </p>
+                <p className="feature__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam, eius.{" "}
+                </p>
+              </Col>
 
-      {/* <section>
+              {featureData.map((item, index) => (
+                <Col lg="4" md="6" sm="6" key={index} className="mt-5">
+                  <div className="feature__item text-center px-5 py-3">
+                    <img
+                      src={item.imgUrl}
+                      alt="feature-img"
+                      className="w-25 mb-3"
+                    />
+                    <h5 className=" fw-bold mb-3">{item.title}</h5>
+                    <p>{item.desc}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
+
+        {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -249,7 +276,7 @@ const Home = () => {
         </Container>
       </section> */}
 
-      {/* <section className="pt-0">
+        {/* <section className="pt-0">
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5 ">
@@ -324,7 +351,7 @@ const Home = () => {
         </Container>
       </section>
 
-      {/*  <section>
+        {/*  <section>
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -350,10 +377,9 @@ const Home = () => {
           </Row>
         </Container>
       </section> */}
-    </Helmet>
-    <ToastContainer />
+              
+            /*   <ToastContainer /> */
     </motion.div>
-    
   );
 };
 

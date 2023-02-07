@@ -27,5 +27,17 @@
                 margin-bottom: 15px;
             }
         }
+        @media screen  and (max-width:800px){
+            .widgets{
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+            }
+            .charts{
+                display: flex;
+                flex-direction: column;
+                width: auto;
+            }
+        }
     }
 }

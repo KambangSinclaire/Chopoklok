@@ -10,13 +10,11 @@ import {
   MDBBtn,
   MDBRipple,
 } from "mdb-react-ui-kit";
-import Products from "../assets/Data/Products";
 import { motion } from "framer-motion";
 import "../Styles/menu.css";
 import { Link, useNavigate } from "react-router-dom";
 import products from "../assets/Data/Products";
 import React, { useState, useEffect } from "react";
-import Filters from "./Filters";
 import Animate from "./textAnimator";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
@@ -209,13 +207,12 @@ function Orders() {
         </div>
         <div className="p-cards">
           <MDBContainer>
-            <h4 className="mt-5 mb-0 align-items-center">
+            <h4 className="mt-5 d-flex align-items-center">
               <strong className="align-items-center">Order List</strong>
             </h4>
-
             <MDBRow>
               {allProducts.map((item) => (
-                <Col lg="3" md="4" key={item.id} className="mt-5">
+                <Col lg="3" md="4" key={item.id} className="mb-5 ">
                   <ProductCard item={item} />
                 </Col>
               ))}

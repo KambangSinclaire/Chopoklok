@@ -4,8 +4,9 @@ import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/Images/res-logo.png";
 import { useSelector } from "react-redux";
 import { MDBIcon } from "mdb-react-ui-kit";
-
+import MyComponent from "./AppName";
 import "../../Styles/header.css";
+
 const nav_links = [
   {
     display: "Home",
@@ -14,21 +15,27 @@ const nav_links = [
     className: "nav_links",
   },
   {
-    display: "Menu",
-    path: "/menu",
+    display: "Order Now",
+    path: "/Orders",
     icon: <MDBIcon fas icon="store" size="sm" />,
     className: "nav_links",
   },
-  {
-    display: "Cart",
-    path: "/cart-checkout",
-    icon: <MDBIcon fas icon="shopping-cart" size="sm" />,
-    className: "nav_links",
-  },
+  // {
+  //   display: "Cart",
+  //   path: "/cart-checkout",
+  //   icon: <MDBIcon fas icon="shopping-cart" size="sm" />,
+  //   className: "nav_links",
+  // },
   {
     display: "Contact",
     path: "/contact",
     icon: <MDBIcon fas icon="user-cog" size="sm" />,
+    className: "nav_links",
+  },
+  {
+    display: "About Us",
+    path: "/aboutUs",
+    icon: <MDBIcon fas icon="shopping-cart" size="sm" />,
     className: "nav_links",
   },
   {
@@ -58,13 +65,16 @@ const Header = () => {
   const amount = useSelector((store) => store.cart.itemAmountInCart);
   //const menuRef = useRef(null);
   //const toggleMenu = () => menuRef.current.classList.toggle("show_menu");
+  
   return (
     <header className="header">
       <Container>
         <div className="nav_wrapper d-flex align-items-center justify-content-between">
           <div className="logo">
-            <img src={logo} alt="logo"></img>
+          {<MyComponent/>}
+            <img src={logo} className="logo_image" alt="logo"/>
             <h5>ChopOklok</h5>
+            {<MyComponent/>}
           </div>
           {/*         ---- menu ---- <span>{item.icon}</span> */}
           <div className="navigation">
@@ -86,7 +96,9 @@ const Header = () => {
           {/*   ---- nav right icons ---- */}
           <div className="nav_right d-flex align-items-center gap-4">
             <span className="cart_icon">
+              <Link to="/cart-checkout">
               <i className="ri-shopping-basket-line"></i>
+              </Link>
               <span className="cart_badge">{amount}</span>
             </span>
 

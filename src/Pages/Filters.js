@@ -13,29 +13,28 @@ import {
 import Products from "../assets/Data/Products";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import products from "../assets/Data/Products";
 import React, { useState, useEffect } from "react";
 
 
 const Filters = () =>{
 const product2 = Products;
   const [category, setCategory] = useState("ALL");
-  const [allProducts, setAllProducts] = useState(products);
+  const [allProducts, setAllProducts] = useState(Products);
 
   const [hotPizza, setHotPizza] = useState([]); 
   useEffect(() => {
-    const filteredPizza = products.filter((item) => item.category === "Pizza");
+    const filteredPizza = Products.filter((item) => item.category === "Pizza");
     const slicePizza = filteredPizza.slice(0, 4);
     setHotPizza(slicePizza);
   }, []); 
 
   useEffect(() => {
     if (Category === "ALL") {
-      setAllProducts(products);
+      setAllProducts(Products);
     } 
 
     if (Category === "BURGER") {
-      const filteredProducts = products.filter(
+      const filteredProducts = Products.filter(
         (item) => item.category === "Burger"
       );
 
@@ -43,7 +42,7 @@ const product2 = Products;
     }
 
     if (Category === "PIZZA") {
-      const filteredProducts = products.filter(
+      const filteredProducts = Products.filter(
         (item) => item.category === "Pizza"
       );
 
@@ -51,7 +50,7 @@ const product2 = Products;
     }
 
     if (Category === "BREAD") {
-      const filteredProducts = products.filter(
+      const filteredProducts = Products.filter(
         (item) => item.category === "Bread"
       );
 

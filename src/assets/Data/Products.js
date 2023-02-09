@@ -215,7 +215,7 @@ const Products = [
   {
     id: 14,
     title: "Ekwang",
-    price: 1000,
+    price: 10,
     image01: African_4,
     image02: African_4,
     image03: African_4,
@@ -227,7 +227,7 @@ const Products = [
   {
     id: 15,
     title: "Corn-Chaf",
-    price: 1000,
+    price: 8,
     image01: African_3,
     image02: African_3,
     image03: African_3,
@@ -239,7 +239,7 @@ const Products = [
   {
     id: 16,
     title: "Achu",
-    price: 1000,
+    price: 12,
     image01: African_1,
     image02: African_1,
     image03: African_1,
@@ -251,7 +251,7 @@ const Products = [
   {
     id: 17,
     title: "Eru and Garri",
-    price: 1000,
+    price: 5,
     image01: African_2,
     image02: African_2,
     image03: African_2,
@@ -263,7 +263,7 @@ const Products = [
   {
     id: 18,
     title: "Fufu Corn and Huckleberry",
-    price: 1000,
+    price: 23,
     image01: African_5,
     image02: African_5,
     image03: African_5,
@@ -275,7 +275,7 @@ const Products = [
   {
     id: 19,
     title: "Ikok",
-    price: 1000,
+    price: 15,
     image01: African_6,
     image02: African_6,
     image03: African_6,
@@ -287,7 +287,7 @@ const Products = [
   {
     id: 20,
     title: "Kwacoco",
-    price: 1000,
+    price: 20,
     image01: African_7,
     image02: African_7,
     image03: African_7,
@@ -299,7 +299,7 @@ const Products = [
   {
     id: 21,
     title: "Ndolè",
-    price: 1000,
+    price: 19,
     image01: African_8,
     image02: African_8,
     image03: African_8,
@@ -311,7 +311,7 @@ const Products = [
   {
     id: 22,
     title: "Fruit Drink 1",
-    price: 1000,
+    price: 16,
     image01: Fruit_drink_001,
     image02: Fruit_drink_001,
     image03: Fruit_drink_001,
@@ -323,7 +323,7 @@ const Products = [
   {
     id: 23,
     title: "Cocktail",
-    price: 1000,
+    price: 18,
     image01: Fruit_drink_002,
     image02: Fruit_drink_002,
     image03: Fruit_drink_002,
@@ -335,7 +335,7 @@ const Products = [
   {
     id: 24,
     title: "Assorted",
-    price: 1000,
+    price: 15,
     image01: Fruit_drink_003,
     image02: Fruit_drink_003,
     image03: Fruit_drink_003,
@@ -347,7 +347,7 @@ const Products = [
   {
     id: 25,
     title: "Cream in glass",
-    price: 1000,
+    price: 21,
     image01: IceCream_001,
     image02: IceCream_001,
     image03: IceCream_001,
@@ -359,7 +359,7 @@ const Products = [
   {
     id: 26,
     title: "Cup Cream",
-    price: 1000,
+    price: 17,
     image01: IceCream_002,
     image02: IceCream_002,
     image03: IceCream_002,
@@ -371,7 +371,7 @@ const Products = [
   {
     id: 27,
     title: "Bunches on plate cream",
-    price: 1000,
+    price: 13,
     image01: IceCream_003,
     image02: IceCream_003,
     image03: IceCream_003,
@@ -395,7 +395,7 @@ const Products = [
   {
     id: 29,
     title: "Potatoe chips burger and Pepper",
-    price: 1000,
+    price: 10,
     image01: FastFood_002,
     image02: FastFood_002,
     image03: FastFood_002,
@@ -407,7 +407,7 @@ const Products = [
   {
     id: 30,
     title: "Grilled chicken",
-    price: 1000,
+    price: 17,
     image01: FastFood_003,
     image02: FastFood_003,
     image03: FastFood_003,

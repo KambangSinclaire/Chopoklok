@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Helmet from "../Components/Helmet/Helmet.js";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
-import {ToastContainer,toast} from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import "../Styles/hero-section.css";
 import { Link } from "react-router-dom";
@@ -21,6 +21,7 @@ import whyImg from "../assets/Images/whyChop.svg";
 
 import newHero from "../assets/Images/chopoklok_Del.svg";
 import Hero3 from "../assets/Images/eating.svg";
+import HomeSliderImages from "./HomeSliderImages.js";
 
 /* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
 const featureData = [
@@ -43,7 +44,7 @@ const featureData = [
 ];
 
 const Home = () => {
-  const notify  = () => toast("Sorry, you must be logged in to view this page")
+  const notify = () => toast("Sorry, you must be logged in to view this page")
   /*   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
@@ -90,26 +91,25 @@ const Home = () => {
       animate={{ width: "100%" }}
       exit={{ Y: 0, transition: { duration: 1.5 } }}
     >
-      
-        <section>
-          <Container>
-            <Row>
-              <Col lg="6" md="6">
-                <div className="hero__content  ">
-                  <h5 className="mb-3">Easy way to make an order</h5>
-                  <h1 className="mb-4 hero__title">
-                    <span>HUNGRY?</span> Sign up <br /> and have food deliverd
-                    <span></span>
-                  </h1>
 
-                  {/*  <p>
+      <section>
+        <Container>
+          <Row>
+            <Col lg="6" md="6">
+              <div className="hero__content  ">
+                <h5 className="mb-3">Easy way to make an order</h5>
+                <h1 className="mb-4 hero__title">
+                  <span>HUNGRY?</span> Sign up <br /> and have food deliverd
+                </h1>
+
+                {/*  <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
                   magni delectus tenetur autem, sint veritatis!
                 </p> */}
 
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
-                  <button className="order__btn d-flex align-items-center justify-content-between color-white"  onClick={notify}  >
-                  <Link to="/orders">Order now</Link> <i className="ri-arrow-right-s-line"></i>
+                  <button className="order__btn d-flex align-items-center justify-content-between color-white" onClick={notify}  >
+                    <Link to="/orders">Order now</Link> <i className="ri-arrow-right-s-line"></i>
                   </button>
 
                   <button className="all__foods-btn">
@@ -125,19 +125,20 @@ const Home = () => {
                     Cheap Transportation
                   </p>
 
-                    <p className=" d-flex align-items-center gap-2 ">
-                      <span className="shipping__icon">
-                        <i className="ri-shield-check-line"></i>
-                      </span>{" "}
-                      100% secure checkout
-                    </p>
-                  </div>
+                  <p className=" d-flex align-items-center gap-2 ">
+                    <span className="shipping__icon">
+                      <i className="ri-shield-check-line"></i>
+                    </span>{" "}
+                    100% secure checkout
+                  </p>
                 </div>
-            {/*   </div> */}
-            </Col> 
+              </div>
+              {/*   </div> */}
+            </Col>
 
             <Col lg="6" md="6">
               <div className="hero__img">
+                {<HomeSliderImages/>}
                 <img src={newHero} alt="hero-img" className="w-100" />
               </div>
             </Col>
@@ -147,7 +148,7 @@ const Home = () => {
       {/* <section className="pt-0">
         <Category />
       </section> */}
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -160,60 +161,60 @@ const Home = () => {
                 Stay home and enjoy quality food services as if you were live at the shop itself.
               </p>
               <p className="feature__text">
-                Maintaining high moral standards with all clients is also one of our prioritized 
-                strong points. We don't joke with our customers and their remarks be it positive or negative. 
+                Maintaining high moral standards with all clients is also one of our prioritized
+                strong points. We don't joke with our customers and their remarks be it positive or negative.
                 We keep trying to improve the on the positive remarks and work on the negative remarks to to catch up as soon as possible.{" "}
               </p>
             </Col>
 
-              <Col lg="6" md="6">
-                <div className="hero__img">
-                  <img src={Hero3} alt="hero-img" className="w-100" />
+            <Col lg="6" md="6">
+              <div className="hero__img">
+                <img src={Hero3} alt="hero-img" className="w-100" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section> */}
+      {/* <section className="pt-0">
+        <Category />
+      </section> */}
+      <section>
+        <Container>
+          <Row>
+            {/* <Col lg="12" className="text-center">
+              <h5 className="feature__subtitle mb-4">What we serve</h5>
+              <h2 className="feature__title">Just sit back at home</h2>
+              <h2 className="feature__title">
+                we will <span>take care</span>
+              </h2>
+              <p className="mb-1 mt-4 feature__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Dolor, officiis?
+              </p>
+              <p className="feature__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, eius.{" "}
+              </p>
+            </Col> */}
+
+            {featureData.map((item, index) => (
+              <Col lg="4" md="6" sm="6" key={index} className="mt-1">
+                <div className="feature__item text-center px-5 py-3">
+                  <img
+                    src={item.imgUrl}
+                    alt="feature-img"
+                    className="w-25 mb-3"
+                  />
+                  <h5 className=" fw-bold mb-3">{item.title}</h5>
+                  <p>{item.desc}</p>
                 </div>
               </Col>
-            </Row>
-          </Container>
-        </section>
-        <section className="pt-0">
-         {/*  <Category /> */}
-        </section>
-        <section>
-          <Container>
-            <Row>
-              <Col lg="12" className="text-center">
-                <h5 className="feature__subtitle mb-4">What we serve</h5>
-                <h2 className="feature__title">Just sit back at home</h2>
-                <h2 className="feature__title">
-                  we will <span>take care</span>
-                </h2>
-                <p className="mb-1 mt-4 feature__text">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolor, officiis?
-                </p>
-                <p className="feature__text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aperiam, eius.{" "}
-                </p>
-              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
 
-              {featureData.map((item, index) => (
-                <Col lg="4" md="6" sm="6" key={index} className="mt-5">
-                  <div className="feature__item text-center px-5 py-3">
-                    <img
-                      src={item.imgUrl}
-                      alt="feature-img"
-                      className="w-25 mb-3"
-                    />
-                    <h5 className=" fw-bold mb-3">{item.title}</h5>
-                    <p>{item.desc}</p>
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-
-        {/* <section>
+      {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -276,7 +277,7 @@ const Home = () => {
         </Container>
       </section> */}
 
-        {/* <section className="pt-0">
+      {/* <section className="pt-0">
         <Container>
           <Row>
             <Col lg="12" className="text-center mb-5 ">
@@ -292,7 +293,7 @@ const Home = () => {
         </Container>
       </section> */}
 
-      <section className="why__choose-us">
+      {/* <section className="why__choose-us">
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -305,18 +306,16 @@ const Home = () => {
                   Why <span>ChopOklok?</span>
                 </h2>
                 <p className="tasty__treat-desc">
-                  This project’s idea has been buckled into the name chopoklok.
-                  Chopoklok is a word made out of two words i.e chop and
-                  o’clock. Chop is a pidgin English word that means eat and
-                  oklok is thought to be the simpler form of o’clock which means
-                  time.
+                  Our 15 years of experience in the field has really 
+                  made us experts in Customer Care, Food Quality 
+                  Ensurance and Hygiene.
                 </p>
 
                 <ListGroup className="mt-4">
                   <ListGroupItem className="border-0 ps-0">
                     <p className=" choose__us-title d-flex align-items-center gap-2 ">
                       <i className="ri-checkbox-circle-line"></i> Fresh and
-                      tasty foods
+                      tasty food.
                     </p>
                     <p className="choose__us-desc">
                       Welcome home, our professional chefs got your back. Every item required to maintain all 
@@ -349,9 +348,9 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
-        {/*  <section>
+      {/*  <section>
         <Container>
           <Row>
             <Col lg="6" md="6">
@@ -377,8 +376,8 @@ const Home = () => {
           </Row>
         </Container>
       </section> */}
-              
-            /*   <ToastContainer /> */
+
+      <ToastContainer />
     </motion.div>
   );
 };

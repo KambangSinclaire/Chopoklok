@@ -35,7 +35,7 @@ const CartItem = ({ id, img, title, category, price, amount }) => {
         </MDBTypography>
 
         <div className="d-flex align-items-center">
-          <p className="fw-bold mb-0 me-5 pe-3">{price} FCFA</p>
+          <p className="fw-bold mb-0 me-5 pe-3">${price}</p>
 
           <div className="def-number-input number-input safari_only">
             <button

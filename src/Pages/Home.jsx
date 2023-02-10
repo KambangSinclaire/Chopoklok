@@ -23,7 +23,7 @@ import newHero from "../assets/Images/chopoklok_Del.svg";
 import Hero3 from "../assets/Images/eating.svg";
 import HomeSliderImages from "./HomeSliderImages.js";
 
-/* import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.js"; */
+import TestimonialSlider from "../Components/UI/Slider/TestimonialSlider.jsx"; 
 const featureData = [
   {
     title: "Quick Delivery",
@@ -107,6 +107,7 @@ const Home = () => {
                   magni delectus tenetur autem, sint veritatis!
                 </p> */}
 
+
                 <div className="hero__btns d-flex align-items-center gap-5 mt-4">
                   <button className="order__btn d-flex align-items-center justify-content-between color-white" onClick={notify}  >
                     <Link to="/orders">Order now</Link> <i className="ri-arrow-right-s-line"></i>
@@ -145,6 +146,9 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+
+      {/* <section className="h-30">{<TestimonialSlider />}</section> */}
+
       {/* <section className="pt-0">
         <Category />
       </section> */}

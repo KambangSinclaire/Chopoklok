@@ -98,7 +98,7 @@ const Contact = () => {
 
 
         </div>
-     </div>
+     
     </section>
 
     </Fragment>

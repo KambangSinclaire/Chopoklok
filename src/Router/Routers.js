@@ -59,6 +59,7 @@ const Routers = () => {
           <Route path="/signin" element={<Signin />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/Notification" element={<Notify/>} />
           <Route
             path="/dashboard"
             element={

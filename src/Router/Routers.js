@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import FoodDetails from '../Pages/FoodDetails';
+import FoodDetails from "../Pages/FoodDetails";
 // import Cart from '../Pages/Cart';
 // import Checkout from '../Pages/Checkout';
-import Contact from '../Pages/Contact';
-import Login from '../Components/Dashboard/Login'
-import Register from '../Pages/Register';
-import Notify from '../Pages/Notification';
-import Cart_checkout from '../Pages/Cart_checkout';
-import ProductCard from '../Pages/ProductCard';
+import Contact from "../Pages/Contact";
+import Login from "../Components/Dashboard/Login";
+import Register from "../Pages/Register";
+import Notify from "../Pages/Notification";
+import Cart_checkout from "../Pages/Cart_checkout";
+import ProductCard from "../Pages/ProductCard";
 import Home from "../Pages/Home";
 import AllFoods from "../Pages/AllFoods";
 
@@ -35,6 +35,7 @@ import { AnimatePresence } from "framer-motion";
 import Account from "../Pages/Account";
 import Checkout from "../modules/Sales/Checkout";
 import Orders from "../Pages/Orders";
+import AboutUs from "../Pages/AboutUs";
 
 const Routers = () => {
   // const { currentUser } = useContext(AuthContext);
@@ -49,16 +50,26 @@ const Routers = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/orders" element={<Orders />} />
+
+          <Route
+            path="/orders"
+            element={
+              <ProtectedRoute>
+                <Orders />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/menu" element={<Menu />} />
           <Route path="/foods/:id" element={<FoodDetails />} />
           <Route path="/cart-checkout" element={<CartCheckout />} />
           {/* <Route path='/checkout' element={<Checkout/>} /> */}
           <Route path="/login" element={<Login />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
+
           <Route path="/Notification" element={<Notify/>} />
           <Route
             path="/dashboard"
@@ -101,7 +112,7 @@ const Routers = () => {
             path="/products"
             element={<New inputs={productInputs} title="Add New Product" />}
           ></Route>
-          <Route path="/orders">
+          <Route path="/orders_Dash">
             <Route index element={<List />} />
             <Route path=":orderId" element={<Single />} />
           </Route>

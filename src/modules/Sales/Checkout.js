@@ -16,7 +16,7 @@ import AddressForm from "./Address";
 import PaymentForm from "./Payments";
 import Review from "./Review";
 
-const steps = ["Shipping address", "Payment details", "Review your order"];
+const steps = ["Delivery address", "Payment details", "Review your order"];
 
 function getStepContent(step) {
   switch (step) {

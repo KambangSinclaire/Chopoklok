@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import MDBBtn from "mdb-react-ui-kit";
 import { useDispatch } from "react-redux";
 import { ClearChopoklokCart } from "../../Features/Cart/CartSlice";
+import { Link } from "react-router-dom";
 
 function ClearCartModal() {
   const dispatch = useDispatch();
@@ -14,10 +15,12 @@ function ClearCartModal() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Clear Cart{" "}
-      </Button>{" "}
-      Call on clear
+      <Button onClick={handleShow}>Clear Cart </Button>{" "}
+      <Link to="/checkout">
+        <Button variant="primary" onClick={handleShow}>
+          Proceed to checkout{" "}
+        </Button>{" "}
+      </Link>
       <Modal show={show} onHide={handleClose} animation={true}>
         <Modal.Header closeButton>
           <Modal.Title>Remove All Items From Your Shopping Cart?</Modal.Title>

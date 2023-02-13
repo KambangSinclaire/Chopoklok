@@ -18,15 +18,15 @@ const Widgets = ({ type }) => {
         title: "USERS",
         isMoney: false,
         link: "See all users",
-        icon: <PersonOutlinedIcon className="icon"
-        style={{
-            color: 'crimson',
-            backgroundColor: 'rgba(255,0,0,0.2)'
-        }
-          
-        }
-        
-        />,
+        icon: (
+          <PersonOutlinedIcon
+            className="icon"
+            style={{
+              color: "crimson",
+              backgroundColor: "rgba(255,0,0,0.2)",
+            }}
+          />
+        ),
       };
       break;
     case "order":
@@ -34,13 +34,15 @@ const Widgets = ({ type }) => {
         title: "ORDERS",
         isMoney: false,
         link: "View all orders",
-        icon: <ShoppingCartOutlinedIcon className="icon"
-        style={{
-            backgroundColor: 'ragba(218,165,32,0.2)',
-            color:'goldenrod'
-        }}
-        
-        />,
+        icon: (
+          <ShoppingCartOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "ragba(218,165,32,0.2)",
+              color: "goldenrod",
+            }}
+          />
+        ),
       };
       break;
     case "earnings":
@@ -48,13 +50,15 @@ const Widgets = ({ type }) => {
         title: "EARNINGS",
         isMoney: true,
         link: "View net ernings",
-        icon: <MonetizationOnOutlinedIcon className="icon"
-        style={{
-            backgroundColor: 'ragba(0,128,0,0.2)',
-            color:'green'
-        }}
-        
-        />,
+        icon: (
+          <MonetizationOnOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "ragba(0,128,0,0.2)",
+              color: "green",
+            }}
+          />
+        ),
       };
       break;
     case "balance":
@@ -62,13 +66,15 @@ const Widgets = ({ type }) => {
         title: "BALANCE",
         isMoney: true,
         link: "See details",
-        icon: <AccountBalanceWalletOutlinedIcon className="icon"
-        style={{
-            backgroundColor: 'ragba(128,0,128,0.2)',
-            color:'purple'
-        }}
-        
-        />,
+        icon: (
+          <AccountBalanceWalletOutlinedIcon
+            className="icon"
+            style={{
+              backgroundColor: "ragba(128,0,128,0.2)",
+              color: "purple",
+            }}
+          />
+        ),
       };
       break;
 
@@ -81,14 +87,14 @@ const Widgets = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney && "$"} {amount}
+          {data.isMoney && "CFA"} {amount}
         </span>
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
         <div className="percentage positive ">
           <KeyboardArrowUpIcon />
-          {diff}  %
+          {diff} %
         </div>
         {data.icon}
       </div>

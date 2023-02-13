@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import products from "../../assets/Data/Products";
 
 const initialState = {
-  cartItems: products,
+  cartItems: [],
   itemAmountInCart: 0,
   totalPrice: 0,
   isLoadingFromDb: true,
@@ -43,22 +43,48 @@ const cartSlice = createSlice({
         console.log(amount + "amount");
         // Calculate Monetary total in cart
         total2 += item.amount * item.price;
-        console.log(total2 + "total");
+        /*  console.log(total2 + "total"); */
       });
       state.itemAmountInCart = amount;
       state.totalPrice = total2;
     },
     addToCart: (state, action) => {
       console.log(action);
+      const newItem = action.payload;
       const itemInCart = state.cartItems.find((item) => item.id === action);
 
       if (itemInCart) {
-        itemInCart.amount++;
+        itemInCart.amount = state.itemAmountInCart++;
       } else {
-        state.cartItems.push({ ...action, quantity: 1 });
+        state.cartItems.push({
+          ...action,
+          amount: 1,
+          id: newItem.id,
+          title: newItem.title,
+          price: newItem.price,
+          image01: newItem.image01,
+          category: newItem.category,
+          desc: newItem.desc,
+        });
       }
-      alert("Working!!!");
-      console.log(itemInCart);
+      /*    alert("Working!!!");
+      console.log(itemInCart); */
+      /*       const newItem = action.payload;
+      const existingItem = state.cartItems.find((item) => item.id === newItem);
+      state.itemAmountInCart++;
+
+      if (!existingItem) {
+        state.cartItems.push({
+          id: newItem.id,
+          title: newItem.title,
+          price: newItem.price,
+          amount: newItem.amount,
+          category: newItem.category,
+          image01: newItem.image01,
+        });
+      } else {
+        existingItem.amount++;
+      } */
     },
   },
 });

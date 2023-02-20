@@ -1,11 +1,7 @@
 import React from "react";
-
 import "../../../Styles/product-card.css";
-
 import { Link } from "react-router-dom";
 import { MDBTypography } from "mdb-react-ui-kit";
-
-
 import { useDispatch } from "react-redux";
 import {addToCart} from "../../../Features/Cart/CartSlice";
 import CartItem from "../../../Pages/cartItem";

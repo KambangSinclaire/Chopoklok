@@ -35,6 +35,7 @@ import { AnimatePresence } from "framer-motion";
 import Account from "../Pages/Account";
 import Checkout from "../modules/Sales/Checkout";
 import Orders from "../Pages/Orders";
+import AboutUs from "../Pages/AboutUs";
 
 const Routers = () => {
   // const { currentUser } = useContext(AuthContext);
@@ -63,6 +64,7 @@ const Routers = () => {
           <Route path="/cart-checkout" element={<CartCheckout />} />
           {/* <Route path='/checkout' element={<Checkout/>} /> */}
           <Route path="/login" element={<Login />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/contact" element={<Contact />} />

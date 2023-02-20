@@ -152,7 +152,9 @@ const Home = () => {
       {/* <section className="pt-0">
         <Category />
       </section> */}
-      {/* <section>
+
+      {/*
+      <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -213,12 +215,80 @@ const Home = () => {
                   <p>{item.desc}</p>
                 </div>
               </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+            </Row>
+          </Container>
+        </section> */}
 
-      {/* <section>
+<section className="serveTxtContainer">
+  
+  <div className="innertxt">
+  <h5 className="feature__subtitle mb-4">What we <span>serve</span></h5>
+    <h2 className="feature__subtitle">Just stay home,</h2>
+    <h2 className="feature__subtitle">
+      we will <span>take care</span>
+    </h2>
+    <p className="mb-1 mt-4 feature__text">
+      Stay home and enjoy quality food services as if you were live at the shop itself.
+    </p>
+    <p className="feature__text">
+      Maintaining high moral standards with all clients is also one of our prioritized 
+      strong points. We don't joke with our customers and their remarks be it positive or negative. 
+      We keep trying to improve the on the positive remarks and work on the negative remarks to to catch up as soon as possible.{" "}
+    </p>
+  </div>
+  <div className="innerImg">
+  <img src={Hero3} alt="hero-img" style={{
+    width:'auto'
+  }} />
+  </div>
+
+</section>
+
+        <section className="pt-0">
+         {/*  <Category /> */}
+        </section>
+        <section>
+          <Container>
+            <Row>
+            {/*   <Col lg="12" className="text-center">
+                <h5 className="feature__subtitle mb-4">What we serve</h5>
+                <h2 className="feature__title">Just sit back at home</h2>
+                <h2 className="feature__title">
+                  we will <span>take care</span>
+                </h2>
+                <p className="mb-1 mt-4 feature__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolor, officiis?
+                </p>
+                <p className="feature__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aperiam, eius.{" "}
+                </p>
+              </Col> */}
+
+              {featureData.map((item, index) => (
+                <Col lg="4" md="6" sm="6" key={index} className="mt-5">
+                  <div className="feature__item text-center px-5 py-3">
+                    <img
+                      src={item.imgUrl}
+                      alt="feature-img"
+                      className="w-25"
+                      style={{
+                        marginLeft:'85px'
+                      }}
+                    />
+                    <h5 className=" fw-bold mb-3">{item.title}</h5>
+                    <p>{item.desc}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
+
+     
+
+        {/* <section>
         <Container>
           <Row>
             <Col lg="12" className="text-center">
@@ -380,8 +450,7 @@ const Home = () => {
           </Row>
         </Container>
       </section> */}
-
-      <ToastContainer />
+     {/*  <ToastContainer />  */}
     </motion.div>
   );
 };

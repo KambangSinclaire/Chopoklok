@@ -51,15 +51,15 @@ const Sidebar = () => {
               <span>Orders</span>
             </li>
           </Link>
-          <li>
+          {/*  <li>
             <DeliveryDiningOutlinedIcon className="icon" />
             <span>Deliveries</span>
-          </li>
-          <p className="title">USEFULL</p>
+          </li> */}
+          {/*  <p className="title">USEFULL</p>
           <li>
             <NotificationsNoneOutlinedIcon className="icon" />
             <span>Notifications</span>
-          </li>
+          </li> */}
           {/*   <p className="title">SERVICE</p>
           <li>
             <QueryStatsOutlinedIcon className="icon" />

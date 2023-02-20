@@ -3,15 +3,17 @@
 } */
 
 .feature__subtitle {
+  text-align: center;
+}
+
+.feature__subtitle span {
   color: #0210209f;
 }
 
-.feature__title span {
-  color: #0210209f;
-}
 .feature__text {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 0;
+  text-align: left;
 }
 
 .food__category {
@@ -111,10 +113,10 @@
   .feature__subtitle {
     font-size: 1rem;
   }
-  .feature__text {
+  /* .feature__text {
     font-size: 0.8rem;
     margin-bottom: 0;
-  }
+  } */
 
   .food__category {
     padding: 15px;
@@ -158,4 +160,23 @@
   .why__choose-us {
     padding-top: 0 !important;
   }
+}
+
+.serveTxtContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3px;
+  /*  border: 1px solid black; */
+}
+
+.innertxt {
+  flex: 3;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  word-wrap: normal;
+}
+
+.innerImg {
+  flex: 2;
 }

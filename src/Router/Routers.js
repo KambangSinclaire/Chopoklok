@@ -70,6 +70,7 @@ const Routers = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
 
+          <Route path="/Notification" element={<Notify/>} />
           <Route
             path="/dashboard"
             element={

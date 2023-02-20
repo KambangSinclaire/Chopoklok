@@ -32,6 +32,7 @@ const nav_links = [
     icon: <MDBIcon fas icon="user-cog" size="sm" />,
     className: "nav_links",
   },
+  
   {
     display: "About Us",
     path: "/aboutUs",
@@ -105,6 +106,13 @@ const Header = () => {
             <span className="user">
               <Link to="/login">
                 <i className="ri-user-line"></i>
+              </Link>
+            </span>
+
+            
+            <span className="user">
+              <Link to="/Notification">
+              <i class="ri-notification-4-line"></i>
               </Link>
             </span>
 

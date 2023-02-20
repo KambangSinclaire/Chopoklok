@@ -1,12 +1,11 @@
-import  { useState } from "react";
-import React,{Fragment} from 'react'
-import '../Styles/contact.css'
-
+import  { useState } from "react"; 
+import React,{Fragment} from 'react';
+import '../Styles/contact.css';
 
 const defaultValues = {
-    name: '',
-    email: '',
-    message: ''
+     name: '',
+     email: '',
+     message: ''
 }
 
 const Contact = () => {
@@ -15,26 +14,29 @@ const Contact = () => {
 
     const handleChange = (event) => {
 
-        const {name, value} = event.target
+    const {name, value} = event.target
 
-        setformFields({ ...formField, [name]: value})
+    setformFields({ ...formField, [name]: value})
+ }
 
-    }
-  return (
-    <Fragment>
-    <section className='contact'>
-     <div className='contact-heading'>
-        <h2>Contact Us</h2>
-     </div>
+    return (
+        <Fragment>
 
-     <div className='container'>
-        <div className='row1'>
+            <section className='contact'>
+                
+
+                <div className='contact-heading'>
+                    <h2> Contact Us</h2>
+                </div>
+
+                <div className='container'>
+                    <div className='row1'>
 
             <div className='column'>
                 <div className='contact-widget'>
                     <div className='contact-widget-item'>
                         <div className='icon'>
-                        <i className="fa-solid fa-location-dot"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         </div>
 
                         <div className='text'>
@@ -44,32 +46,28 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className='contact-widget'>
-                    <div className='contact-widget-item'>
-                        <div className='icon'>
-                        <i class="fa-solid fa-phone"></i>
-                        </div>
+                                <div className='contact-widget-item'>
+                                    <div className='icon'>
+                                    <i class="ri-phone-fill"></i>
+                                    </div>
+                                    <div className='text'>
+                                        <h5>Contact Us</h5>
+                                        <p>+237 678 923 409</p>
+                                    </div>
+                                </div>
 
-                        <div className='text'>
-                            <h5>Contact Us</h5>
-                            <p>+237 677876540</p>
-                        </div>
-                    </div>
-                </div>
+                                <div className='contact-widget-item'>
+                                    <div className='icon'>
+                                    <i class="ri-mail-line"></i>
+                                    </div>
+                                    <div className='text'>
+                                        <h5>mail</h5>
+                                        <p>Chopoklok@gmail.com</p>
+                                    </div>
+                                </div>
 
-                <div className='contact-widget'>
-                    <div className='contact-widget-item'>
-                        <div className='icon'>
-                        <i class="fa-regular fa-envelope"></i>
+                            </div>
                         </div>
-
-                        <div className='text'>
-                            <h5>Mail</h5>
-                            <p>chopoklok@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
             <div className="column">
@@ -78,7 +76,7 @@ const Contact = () => {
                         <input type='text' placeholder='Name' name='name' onChange={handleChange} value={name} required/>
                         <input type='email' placeholder='Email' name='email' onChange={handleChange}  value={email} required/>
                         <textarea placeholder='Comment' name='message' onChange={handleChange}  value={message} required></textarea>
-                        <button type='submit'className="site-btn">Send Message</button>
+                        <button type='submit'>Send Message</button>
                     </form>
                 </div>
             </div>
@@ -100,7 +98,7 @@ const Contact = () => {
 
 
         </div>
-     </div>
+     
     </section>
 
     </Fragment>
